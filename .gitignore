@@ -1,0 +1,13 @@
+.DS_Store
+*.pyc
+*.pyo
+.ipython/db
+.ipython/history
+.ipython/IPython_crash_report.txt
+.ipython/profile_default/db
+.ipython/profile_default/log
+.ipython/profile_default/pid
+.ipython/profile_default/security
+.ipython/profile_default/history.sqlite
+.pip/pip.log
+.pip/build
