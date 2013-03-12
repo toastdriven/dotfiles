@@ -1,0 +1,18 @@
+{
+	"auto_complete": false,
+	"caret_style": "phase",
+	"color_scheme": "Packages/Color Scheme - Default/My Twilight.tmTheme",
+	"draw_indent_guides": false,
+	"draw_white_space": "all",
+	"ensure_newline_at_eof_on_save": true,
+	"font_face": "monofur",
+	"font_size": 13,
+	"rulers":
+	[
+		80
+	],
+	"scroll_past_end": true,
+	"translate_tabs_to_spaces": true,
+	"trim_automatic_white_space": true,
+	"trim_trailing_white_space_on_save": true
+}

@@ -1,0 +1,53 @@
+{
+	"auto_complete": false,
+	"caret_style": "phase",
+	"color_scheme": "Packages/Color Scheme - Default/My Twilight.tmTheme",
+	"draw_indent_guides": false,
+	"draw_white_space": "all",
+	"ensure_newline_at_eof_on_save": false,
+	"folder_exclude_patterns":
+	[
+		".svn",
+		".git",
+		".hg",
+		"CVS",
+		".tox"
+	],
+	"font_face": "monofur",
+	"font_size": 13.0,
+	"html_panel":
+	[
+		{
+			"Browser View - Color":
+			{
+				"browser_print": false,
+				"color_scheme": "Packages/Color Scheme - Default/My Twilight.tmTheme",
+				"multi_select": true,
+				"numbers": false,
+				"style_gutter": false,
+				"wrap": 80
+			}
+		}
+	],
+	"ignored_packages":
+	[
+		"Vintage",
+		"SublimeCodeIntel"
+	],
+	"new_window_settings":
+	{
+		"show_minimap": false,
+		"show_tabs": true,
+		"side_bar_visible": false,
+		"status_bar_visible": true
+	},
+	"rulers":
+	[
+		80
+	],
+	"scroll_past_end": true,
+	"translate_tabs_to_spaces": true,
+	"trim_automatic_white_space": true,
+	"trim_trailing_white_space_on_save": true,
+	"word_wrap": false
+}

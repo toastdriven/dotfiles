@@ -9,6 +9,8 @@ IGNORES = [
     'bin',
     '.git',
     '.gitignore',
+    'ST2-User',
+    'My Twighlight.tmTheme',
 ]
 
 
@@ -29,6 +31,18 @@ def backup_file(link_name, verbose=False):
         shell_out(['mv', link_name, os.path.join(old_dotfiles_path, os.path.basename(link_name))], verbose=verbose)
 
 
+def link_st2(home_directory, verbose=False):
+    filename = os.path.normpath(os.path.realpath('ST2-User'))
+    link_name = os.path.join(home_directory, 'Library', 'Application Support', 'Sublime Text 2', 'Packages', 'User')
+    backup_file(link_name, verbose=verbose)
+    shell_out(['ln', '-s', filename, link_name], verbose=verbose)
+
+    theme_name = os.path.normpath(os.path.realpath('My Twilight.tmTheme'))
+    link_name = os.path.join(home_directory, 'Library', 'Application Support', 'Sublime Text 2', 'Packages', 'Color Scheme - Default', 'My Twilight.tmTheme')
+    backup_file(link_name, verbose=verbose)
+    shell_out(['ln', '-s', theme_name, link_name], verbose=verbose)
+
+
 def setup_dotfiles(home_directory, verbose=False):
     dotfile_pattern = os.path.join('.*')
     dotfile_files = glob.glob(dotfile_pattern)
@@ -39,6 +53,7 @@ def setup_dotfiles(home_directory, verbose=False):
     setup_symlinks(home_directory, regular_files, verbose=verbose)
 
     create_gitingore(home_directory, verbose=verbose)
+    link_st2(home_directory, verbose=verbose)
 
 
 def setup_symlinks(home_directory, files, verbose=False):
