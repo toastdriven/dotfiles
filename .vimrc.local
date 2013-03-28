@@ -1,10 +1,10 @@
-color mytwilight
+" color mytwilight
 au FileType python set nowrap softtabstop=4 tabstop=4 shiftwidth=4 textwidth=0
 au FileType html set nowrap softtabstop=2 tabstop=2 shiftwidth=2 textwidth=0
 set wildmode=longest,list
 set nowrap
 let NERDTreeSortOrder=[]
 let g:ragtag_global_maps = 1
-call pathogen#runtime_append_all_bundles()
+" call pathogen#runtime_append_all_bundles()
 set wildignore+=*.pyc
 
