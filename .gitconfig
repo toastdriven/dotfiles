@@ -11,5 +11,6 @@
     st = status
     co = checkout
     cb = checkout -b
+    ct = checkout -t
 [push]
 	default = simple
