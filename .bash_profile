@@ -39,9 +39,9 @@ alias st='subl -n'
 alias runsnake='VERSIONER_PYTHON_PREFER_32_BIT=yes /usr/local/bin/runsnake'
 
 # Mighty tmux environments are MIGHTY!
-alias forkinit="~/tmux-envs/forkinit.sh"
-alias haystack="~/tmux-envs/haystack.sh"
-alias tastypie="~/tmux-envs/tastypie.sh"
-alias djangodash="~/tmux-envs/djangodash.sh"
-alias helm="~/tmux-envs/helm.sh"
-alias boto="~/tmux-envs/boto.sh"
+for file in ~/tmux-envs/*.sh
+do
+    filename=$(basename "$file")
+    filename="${filename%.*}"
+    alias $filename=$file
+done
