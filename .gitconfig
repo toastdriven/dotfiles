@@ -6,7 +6,7 @@
 	status = auto
 	branch = auto
 [core]
-    excludesfile = /Users/daniellindsley/.gitignore
+	excludesfile = /Users/daniel/.gitignore
 [alias]
     st = status
     co = checkout
