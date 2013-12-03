@@ -1,6 +1,8 @@
 .DS_Store
+.DS_Store?
 *.pyc
 *.pyo
+__pycache__
 .ipython/db
 .ipython/history
 .ipython/IPython_crash_report.txt
@@ -11,3 +13,7 @@
 .ipython/profile_default/history.sqlite
 .pip/pip.log
 .pip/build
+*.egg-info
+env
+env2
+env3
