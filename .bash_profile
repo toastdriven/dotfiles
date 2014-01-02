@@ -19,6 +19,7 @@ export NODE_PATH='/usr/local/lib/node'
 export ARCHFLAGS='-arch x86_64'
 export GOROOT=/usr/local/go
 export PATH=$PATH:$GOROOT/bin
+export COPYFILE_DISABLE=true
 
 # For ghetto-git bits.
 source ~/gitprompt.sh
