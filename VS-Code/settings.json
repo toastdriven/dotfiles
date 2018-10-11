@@ -1,0 +1,68 @@
+{
+    "editor.fontSize": 13,
+    "editor.fontFamily": "monofur, Menlo, Monaco, 'Courier New', monospace",
+    "editor.renderWhitespace": "all",
+    "editor.cursorStyle": "line-thin",
+    "editor.formatOnSaveTimeout": 4000,
+    "editor.rulers": [78],
+    "editor.minimap.enabled": false,
+    "editor.emptySelectionClipboard": false,
+    "editor.cursorBlinking": "smooth",
+    "editor.dragAndDrop": false,
+    "files.associations": {
+        "*.ract": "handlebars"
+    },
+    "files.exclude": {
+        ".vscode/": true,
+        "mypy_cache/": true
+    },
+    "files.trimTrailingWhitespace": true,
+    "files.watcherExclude": {
+        "**/.git/objects/**": true,
+        "**/.git/subtree-cache/**": true,
+        "**/node_modules/**": true,
+        "**/env/**": true,
+        "**/env2/**": true,
+        "**/env3/**": true,
+        "**/*.pyc": true
+    },
+    "python.pythonPath": "/usr/local/bin/python3",
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": false,
+    "python.linting.flake8Enabled": true,
+    "python.linting.pep8Enabled": true,
+    "python.linting.mypyEnabled": true,
+    "python.linting.mypyPath": "/Users/daniellindsley/Library/Python/3.7/bin/mypy",
+    "python.linting.mypyArgs": [
+        "--quick-and-dirty"
+    ],
+    "python.formatting.provider": "black",
+    "python.formatting.blackPath": "/Users/daniellindsley/Library/Python/3.7/bin/black",
+    "[python]": {
+        "editor.formatOnSave": true,
+        "editor.formatOnSaveTimeout": 4000,
+        "editor.tabSize": 4,
+        "editor.rulers": [
+            88
+        ]
+    },
+    "[javascript]": {
+        "editor.formatOnSave": true,
+        "editor.tabSize": 2
+    },
+    "[handlebars]": {
+        "editor.tabSize": 2
+    },
+    "typescript.npm": "/usr/local/bin/npm",
+    "terminal.external.osxExec": "iTerm.app",
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.editor.showIcons": false,
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "workbench.editor.closeOnFileDelete": false,
+    "explorer.openEditors.visible": 10,
+    "explorer.autoReveal": false,
+    "window.openFoldersInNewWindow": "on",
+    "window.restoreWindows": "all",
+    "window.newWindowDimensions": "inherit",
+    "explorer.confirmDelete": false
+}
