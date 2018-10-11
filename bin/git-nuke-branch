@@ -1,0 +1,22 @@
+#!/usr/bin/env python
+from __future__ import print_function
+
+from shell import shell
+import sys
+
+
+def main(branch):
+    sh = shell('git branch -D {}'.format(branch))
+
+    if sh.errors():
+        print('\n'.join(sh.errors()))
+
+    sh = shell('git push origin :{}'.format(branch))
+
+
+if __name__ == '__main__':
+    if len(sys.argv) != 2:
+        print("Usage: git nuke-branch <branch_name>")
+        sys.exit(1)
+
+    main(sys.argv[1])
