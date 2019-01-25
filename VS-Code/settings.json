@@ -30,14 +30,16 @@
     "python.linting.enabled": true,
     "python.linting.pylintEnabled": false,
     "python.linting.flake8Enabled": true,
+    "python.linting.flake8Path": "/Users/daniellindsley/Library/Python/3.7/bin/flake8",
     "python.linting.pep8Enabled": true,
+    "python.linting.pep8Path": "/Users/daniellindsley/Library/Python/3.7/bin/pep8",
     "python.linting.mypyEnabled": true,
     "python.linting.mypyPath": "/Users/daniellindsley/Library/Python/3.7/bin/mypy",
     "python.linting.mypyArgs": [
         "--quick-and-dirty"
     ],
-    "python.formatting.provider": "black",
-    "python.formatting.blackPath": "/Users/daniellindsley/Library/Python/3.7/bin/black",
+    // "python.formatting.provider": "black",
+    // "python.formatting.blackPath": "/Users/daniellindsley/Library/Python/3.7/bin/black",
     "[python]": {
         "editor.formatOnSave": true,
         "editor.formatOnSaveTimeout": 4000,
@@ -64,5 +66,13 @@
     "window.openFoldersInNewWindow": "on",
     "window.restoreWindows": "all",
     "window.newWindowDimensions": "inherit",
-    "explorer.confirmDelete": false
+    "explorer.confirmDelete": false,
+    "editor.renderIndentGuides": false,
+    "files.insertFinalNewline": true,
+    "editor.scrollBeyondLastLine": true,
+    "editor.trimAutoWhitespace": true,
+    "editor.wordWrap": "off",
+    "editor.formatOnPaste": true,
+    "editor.snippetSuggestions": "top",
+    "workbench.colorTheme": "Monokai",
 }

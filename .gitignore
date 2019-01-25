@@ -6,6 +6,7 @@ __pycache__
 .ipython
 .pip
 .mypy_cache
+.vscode
 *.egg-info
 env
 env2

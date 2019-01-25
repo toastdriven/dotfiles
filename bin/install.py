@@ -74,6 +74,20 @@ def link_vscode(home_directory, verbose=False):
     backup_file(link_name, verbose=verbose)
     shell_out(["ln", "-s", filename, link_name], verbose=verbose)
 
+    filename = os.path.join(
+        os.path.normpath(os.path.realpath("VS-Code")), "keybindings.json"
+    )
+    link_name = os.path.join(
+        home_directory,
+        "Library",
+        "Application Support",
+        "Code",
+        "User",
+        "keybindings.json",
+    )
+    backup_file(link_name, verbose=verbose)
+    shell_out(["ln", "-s", filename, link_name], verbose=verbose)
+
     filename = os.path.join(os.path.normpath(os.path.realpath("VS-Code")), "snippets")
     link_name = os.path.join(
         home_directory, "Library", "Application Support", "Code", "User", "snippets"
@@ -92,7 +106,7 @@ def setup_dotfiles(home_directory, verbose=False):
     setup_symlinks(home_directory, regular_files, verbose=verbose)
 
     create_gitingore(home_directory, verbose=verbose)
-    link_st2(home_directory, verbose=verbose)
+    # link_st2(home_directory, verbose=verbose)
     link_vscode(home_directory, verbose=verbose)
 
 

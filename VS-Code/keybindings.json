@@ -1,0 +1,48 @@
+// Place your key bindings in this file to override the defaults
+[
+    {
+        "key": "cmd+l",
+        "command": "workbench.action.gotoLine",
+    },
+    {
+        "key": "cmd+t",
+        "command": "workbench.action.quickOpenPreviousEditor"
+    },
+    {
+        "key": "shift+cmd+l",
+        "command": "expandLineSelection",
+        "when": "editorFocus"
+    },
+    {
+        "key": "cmd+r",
+        "command": "workbench.action.gotoSymbol",
+    },
+    {
+        "key": "cmd+w",
+        "command": "workbench.action.closeActiveEditor",
+    },
+    {
+        "key": "shift+cmd+[",
+        "command": "workbench.action.previousEditor",
+    },
+    {
+        "key": "shift+cmd+]",
+        "command": "workbench.action.nextEditor",
+    },
+    {
+        "key": "alt+cmd+s",
+        "command": "workbench.action.files.saveAll",
+    },
+    {
+        "key": "shift+cmd+r",
+        "command": "workbench.action.showAllSymbols",
+    },
+    {
+        "key": "cmd+k cmd+u",
+        "command": "editor.action.transformToUppercase",
+    },
+    {
+        "key": "cmd+k cmd+l",
+        "command": "editor.action.transformToLowercase",
+    },
+]
