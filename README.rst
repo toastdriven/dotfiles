@@ -13,3 +13,13 @@ Usage
 ``cd dotfiles && python bin/install.py``
 
 You can also pass ``-v`` to see everything it does.
+
+
+VS Code Extensions
+------------------
+
+* Python
+* ESLint
+* Prettier
+* Docker
+* Go
