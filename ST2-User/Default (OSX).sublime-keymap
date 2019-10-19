@@ -1,6 +1,0 @@
-[
-    { "keys": ["ctrl+shift+v"], "command": "pyflakes" },
-    { "keys": ["ctrl+shift+h"], "command": "reformat_json" },
-    { "keys": ["super+l"], "command": "show_overlay", "args": {"overlay": "goto", "text": ":"} },
-    { "keys": ["super+shift+l"], "command": "expand_selection", "args": {"to": "line"} }
-]
