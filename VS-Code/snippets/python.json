@@ -20,5 +20,12 @@
 			"import pdb; pdb.set_trace()"
 		],
 		"description": "Adds a pdb trace to the code."
+	},
+	"test_": {
+		"prefix": "test_",
+		"body": [
+			"def test_(self):\n    pass\n"
+		],
+		"description": "Starts a test stub method."
 	}
 }

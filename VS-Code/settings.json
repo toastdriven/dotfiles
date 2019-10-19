@@ -5,6 +5,9 @@
     "editor.cursorStyle": "line-thin",
     "editor.formatOnSaveTimeout": 4000,
     "editor.rulers": [78],
+    "workbench.colorCustomizations": {
+        "editorRuler.foreground": "#ffda3388"
+    },
     "editor.minimap.enabled": false,
     "editor.emptySelectionClipboard": false,
     "editor.cursorBlinking": "smooth",
@@ -34,18 +37,21 @@
     "python.linting.pep8Enabled": true,
     "python.linting.pep8Path": "/Users/daniellindsley/Library/Python/3.7/bin/pep8",
     "python.linting.mypyEnabled": true,
-    "python.linting.mypyPath": "/Users/daniellindsley/Library/Python/3.7/bin/mypy",
+    "python.linting.mypyPath": "/Users/daniel/Library/Python/3.7/bin/mypy",
     "python.linting.mypyArgs": [
         "--quick-and-dirty"
     ],
-    // "python.formatting.provider": "black",
-    // "python.formatting.blackPath": "/Users/daniellindsley/Library/Python/3.7/bin/black",
+    "python.formatting.provider": "black",
+    "python.formatting.blackPath": "/Users/daniel/Library/Python/3.7/bin/black",
+    "python.formatting.blackArgs": [
+        "--line-length=78"
+    ],
     "[python]": {
         "editor.formatOnSave": true,
         "editor.formatOnSaveTimeout": 4000,
         "editor.tabSize": 4,
         "editor.rulers": [
-            88
+            78
         ]
     },
     "[javascript]": {
@@ -67,12 +73,14 @@
     "window.restoreWindows": "all",
     "window.newWindowDimensions": "inherit",
     "explorer.confirmDelete": false,
+    "python.linting.pep8Path": "/usr/local/bin/pep8",
     "editor.renderIndentGuides": false,
-    "files.insertFinalNewline": true,
+    "files.insertFinalNewline": false,
     "editor.scrollBeyondLastLine": true,
     "editor.trimAutoWhitespace": true,
     "editor.wordWrap": "off",
     "editor.formatOnPaste": true,
+    "editor.multiCursorModifier": "ctrlCmd",
     "editor.snippetSuggestions": "top",
     "workbench.colorTheme": "Monokai",
 }

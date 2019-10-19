@@ -46,7 +46,7 @@ export MACOSX_DEPLOYMENT_TARGET=10.13
 
 # Ugh. This is ugly & sucks.
 # History is painful.
-PATH="/Users/daniellindsley/Library/Python/3.7/bin:/Users/daniellindsley/Library/Python/2.7/bin:/usr/local/Cellar/python/2.7/bin:/usr/local/bin:/usr/local/packer:/usr/local/sbin:${PATH}"
+PATH="/Users/daniel/Library/Python/3.7/bin:/Users/daniel/Library/Python/2.7/bin:/usr/local/bin:/usr/local/Cellar/python/2.7/bin:/usr/local/packer:/usr/local/sbin:${PATH}"
 export PATH
 export PATH=$PATH:/usr/local/Cellar/go/1.2.1/libexec/bin
 
