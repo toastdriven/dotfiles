@@ -11,3 +11,6 @@ __pycache__
 env
 env2
 env3
+
+zsh-configs/.zcompdump
+zsh-configs/.zsh_history
