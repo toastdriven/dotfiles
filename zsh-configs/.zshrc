@@ -1,21 +1,17 @@
 # Include the custom prompts.
 fpath=("$HOME/.zprompts" "$fpath[@]")
 
-autoload -Uz colors compinit promptinit vcs_info
+autoload -Uz colors compinit promptinit
 colors
 compinit
 promptinit
 
-# Set up the version control prompt.
-source $HOME/.zsh-configs/git_prompt.sh
+# Make sure the prompts will take subsitutions.
 setopt prompt_subst
-precmd_functions+=( git_prompt )
 
-# Set my custom Zsh prompt.
-# prompt toastdriven
-PROMPT="%F{blue}[%f%n@%m:%F{green}%1~%F{cyan}%F{blue}]%f: "
-# Single quotes are important here!
-RPROMPT='${_git_info}'
+# Pull in my custom prompt.
+source $HOME/.zsh-configs/git_prompt.sh
+prompt toastdriven
 
 # Add menu-select style completions
 zstyle ':completion:*' menu select

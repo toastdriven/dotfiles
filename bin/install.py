@@ -5,7 +5,15 @@ import subprocess
 import sys
 
 
-IGNORES = ["bin", ".git", ".gitignore", "ST2-User", "VS-Code", "My Twighlight.tmTheme"]
+IGNORES = [
+    "bin",
+    ".git",
+    ".gitignore",
+    "ST2-User",
+    "VS-Code",
+    "My Twighlight.tmTheme",
+    "zsh-configs",
+]
 
 
 def shell_out(command_args, verbose=False):
@@ -88,12 +96,41 @@ def link_vscode(home_directory, verbose=False):
     backup_file(link_name, verbose=verbose)
     shell_out(["ln", "-s", filename, link_name], verbose=verbose)
 
-    filename = os.path.join(os.path.normpath(os.path.realpath("VS-Code")), "snippets")
+    filename = os.path.join(
+        os.path.normpath(os.path.realpath("VS-Code")), "snippets"
+    )
     link_name = os.path.join(
-        home_directory, "Library", "Application Support", "Code", "User", "snippets"
+        home_directory,
+        "Library",
+        "Application Support",
+        "Code",
+        "User",
+        "snippets",
     )
     backup_file(link_name, verbose=verbose)
     shell_out(["ln", "-s", filename, link_name], verbose=verbose)
+
+
+def link_zsh(home_directory, verbose=False):
+    filename = os.path.normpath(os.path.realpath(".zshenv"))
+    link_name = os.path.join(home_directory, ".zshenv")
+    backup_file(link_name, verbose=verbose)
+    shell_out(["ln", "-sFf", filename, link_name], verbose=verbose)
+
+    filename = os.path.normpath(os.path.realpath("zsh-configs"))
+    link_name = os.path.join(home_directory, ".zsh-configs")
+    shell_out(["ln", "-sFf", filename, link_name], verbose=verbose)
+
+    filename = os.path.normpath(
+        os.path.join(os.path.realpath("zsh-configs"), "toastdriven.zsh")
+    )
+    prompts_name = os.path.join(home_directory, ".zprompts")
+
+    if not os.path.exists(prompts_name):
+        os.makedirs(prompts_name)
+
+    link_name = os.path.join(prompts_name, "prompt_toastdriven_setup")
+    shell_out(["ln", "-sFf", filename, link_name], verbose=verbose)
 
 
 def setup_dotfiles(home_directory, verbose=False):
@@ -108,6 +145,7 @@ def setup_dotfiles(home_directory, verbose=False):
     create_gitingore(home_directory, verbose=verbose)
     # link_st2(home_directory, verbose=verbose)
     link_vscode(home_directory, verbose=verbose)
+    link_zsh(home_directory, verbose=verbose)
 
 
 def setup_symlinks(home_directory, files, verbose=False):
