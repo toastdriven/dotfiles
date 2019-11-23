@@ -29,22 +29,22 @@
         "**/env3/**": true,
         "**/*.pyc": true
     },
-    "python.pythonPath": "/usr/local/bin/python3",
+    "python.pythonPath": "/Users/daniel/.pyenv/shims/python3",
     "python.linting.enabled": true,
     "python.linting.pylintEnabled": false,
     "python.linting.flake8Enabled": true,
-    "python.linting.flake8Path": "/Users/daniel/Library/Python/3.7/bin/flake8",
+    "python.linting.flake8Path": "/Users/daniel/.pyenv/shims/flake8",
     "python.linting.pycodestyleEnabled": true,
-    "python.linting.pycodestylePath": "/Users/daniel/Library/Python/3.7/bin/pep8",
+    "python.linting.pycodestylePath": "/Users/daniel/.pyenv/shims/pep8",
     "python.linting.mypyEnabled": true,
-    "python.linting.mypyPath": "/Users/daniel/Library/Python/3.7/bin/mypy",
+    "python.linting.mypyPath": "/Users/daniel/.pyenv/shims/mypy",
     "python.linting.mypyArgs": [
         "--quick-and-dirty"
     ],
     "python.formatting.provider": "black",
-    "python.formatting.blackPath": "/Users/daniel/Library/Python/3.7/bin/black",
+    "python.formatting.blackPath": "/Users/daniel/.pyenv/shims/black",
     "python.formatting.blackArgs": [
-        "--line-length=78"
+        "--line-length", "78",
     ],
     "[python]": {
         "editor.formatOnSave": true,
@@ -60,6 +60,10 @@
     },
     "[handlebars]": {
         "editor.tabSize": 2
+    },
+    "[markdown]": {
+        "editor.wordWrap": "bounded",
+        "editor.wordWrapColumn": 80,
     },
     "typescript.npm": "/usr/local/bin/npm",
     "terminal.external.osxExec": "iTerm.app",
