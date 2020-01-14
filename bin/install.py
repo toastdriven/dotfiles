@@ -133,6 +133,19 @@ def link_zsh(home_directory, verbose=False):
     shell_out(["ln", "-sFf", filename, link_name], verbose=verbose)
 
 
+def link_fish(home_directory, verbose=False):
+    filename = os.path.normpath(os.path.realpath("fish-configs"))
+    link_name = os.path.join(home_directory, ".config", "fish")
+    backup_file(link_name, verbose=verbose)
+
+    config_name = os.path.join(home_directory, ".config")
+
+    if not os.path.exists(config_name):
+        os.makedirs(config_name)
+
+    shell_out(["ln", "-sFf", filename, link_name], verbose=verbose)
+
+
 def setup_dotfiles(home_directory, verbose=False):
     dotfile_pattern = os.path.join(".*")
     dotfile_files = glob.glob(dotfile_pattern)
@@ -146,6 +159,7 @@ def setup_dotfiles(home_directory, verbose=False):
     # link_st2(home_directory, verbose=verbose)
     link_vscode(home_directory, verbose=verbose)
     link_zsh(home_directory, verbose=verbose)
+    link_fish(home_directory, verbose=verbose)
 
 
 def setup_symlinks(home_directory, files, verbose=False):
