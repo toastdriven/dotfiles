@@ -20,6 +20,13 @@ setopt COMPLETE_ALIASES
 # Allow `sudo ...` to try to provide completions as well.
 zstyle ':completion::complete:*' gain-privileges 1
 
+# Enable incremental history.
+HISTSIZE=10000
+SAVEHIST=10000
+HISTFILE=~/.zsh-configs/.zsh_history
+bindkey -v
+bindkey '^R' history-incremental-search-backward
+
 # Make sure Xcode build for the right OS.
 export MACOSX_DEPLOYMENT_TARGET=10.15
 
