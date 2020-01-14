@@ -144,6 +144,10 @@ def link_fish(home_directory, verbose=False):
         os.makedirs(config_name)
 
     shell_out(["ln", "-sFf", filename, link_name], verbose=verbose)
+    print("To setup fish:")
+    print("    $ echo /usr/local/bin/fish | sudo tee -a /etc/shells")
+    print("    $ chsh -s /usr/local/bin/fish")
+    print("    $ ./.config/fish/setup_initial_env_vars.sh")
 
 
 def setup_dotfiles(home_directory, verbose=False):

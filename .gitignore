@@ -14,3 +14,5 @@ env3
 
 zsh-configs/.zcompdump
 zsh-configs/.zsh_history
+
+fish-configs/fish_variables
