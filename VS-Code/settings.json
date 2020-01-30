@@ -77,7 +77,6 @@
     "window.restoreWindows": "all",
     "window.newWindowDimensions": "inherit",
     "explorer.confirmDelete": false,
-    "python.linting.pycodestylePath": "/usr/local/bin/pep8",
     "editor.renderIndentGuides": false,
     "files.insertFinalNewline": false,
     "editor.scrollBeyondLastLine": true,
