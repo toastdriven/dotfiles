@@ -7,7 +7,7 @@ function fish_prompt
     set_color blue
     echo -n "["
     set_color normal
-    echo -n "$user:$small_host:"
+    echo -n "$user@$small_host:"
     set_color green
     echo -n "$current_dir"
     set_color blue
