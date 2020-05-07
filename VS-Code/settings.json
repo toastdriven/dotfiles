@@ -17,7 +17,8 @@
     },
     "files.exclude": {
         ".vscode/": true,
-        "mypy_cache/": true
+        "mypy_cache/": true,
+        "**/__pycache__": true
     },
     "files.trimTrailingWhitespace": true,
     "files.watcherExclude": {
@@ -27,7 +28,8 @@
         "**/env/**": true,
         "**/env2/**": true,
         "**/env3/**": true,
-        "**/*.pyc": true
+        "**/*.pyc": true,
+        "**/__pycache__": true
     },
     "python.pythonPath": "/Users/daniel/.pyenv/shims/python3",
     "python.linting.enabled": true,
@@ -65,6 +67,9 @@
         "editor.wordWrap": "bounded",
         "editor.wordWrapColumn": 80,
     },
+    "[yaml]": {
+        "editor.tabSize": 2,
+    },
     "typescript.npm": "/usr/local/bin/npm",
     "terminal.external.osxExec": "iTerm.app",
     "workbench.startupEditor": "newUntitledFile",
@@ -86,4 +91,5 @@
     "editor.multiCursorModifier": "ctrlCmd",
     "editor.snippetSuggestions": "top",
     "workbench.colorTheme": "Monokai",
+    "editor.columnSelection": false,
 }
