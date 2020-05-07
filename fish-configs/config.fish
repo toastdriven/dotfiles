@@ -18,10 +18,13 @@ set -l env_root "$HOME/tmux-envs"
 set -l envs (ls $env_root | string split " ")
 
 for env_name in $envs
-    set -l short_name (echo $env_name | string trim -r -c ".sh")
+    set -l short_name (echo $env_name | string split -m 1 -n -r ".sh")
     set -l full_path "$env_root/$env_name"
 
     function $short_name --inherit-variable full_path
         source $full_path
     end
 end
+
+# Created by `userpath` on 2020-02-24 20:21:47
+set PATH $PATH /Users/daniel/.local/bin
