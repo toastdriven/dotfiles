@@ -14,3 +14,5 @@
     ct = checkout -t
 [push]
 	default = simple
+[init]
+	defaultBranch = main
