@@ -21,3 +21,7 @@ set -x -U PATH "$PATH:/usr/local/go/bin:$GOPATH/bin"
 # For faster Docker builds.
 set -x -U COMPOSE_DOCKER_CLI_BUILD "1"
 set -x -U DOCKER_BUILDKIT "1"
+
+# For Sublime Text.
+set -x -U PATH "$PATH:/Applications/Sublime\ Text.app/Contents/SharedSupport/bin"
+
