@@ -1,0 +1,38 @@
+{
+	"color_scheme": "Sisyphus.sublime-color-scheme",
+	"theme": "Default.sublime-theme",
+	"font_face": "monofur, Menlo, Monaco, 'Courier New', monospace",
+	"font_size": 13,
+	"rulers": [
+		78,
+		120,
+	],
+	"spell_check": true,
+	"translate_tabs_to_spaces": true,
+	"wrap_width": 80,
+	"draw_white_space": ["leading_mixed", "isolated_mixed", "trailing"],
+	"trim_trailing_white_space_on_save": "all",
+	"trim_only_modified_white_space": false,
+	"ensure_newline_at_eof_on_save": true,
+	"auto_complete": false,
+	"caret_style": "phase",
+	"draw_indent_guides": false,
+	"copy_with_empty_selection": false,
+	"drag_text": false,
+	"folder_exclude_patterns": [
+		".svn",
+		".git",
+		".hg",
+		"CVS",
+		".Trash",
+		".Trash-*",
+		"__pycache__",
+		"*.vscode",
+		"*.egg-info",
+	],
+	"hide_new_tab_button": true,
+	"ignored_packages":
+	[
+		"Vintage",
+	],
+}
