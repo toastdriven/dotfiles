@@ -4,7 +4,7 @@
     "editor.renderWhitespace": "all",
     "editor.cursorStyle": "line-thin",
     "editor.formatOnSaveTimeout": 4000,
-    "editor.rulers": [78],
+    "editor.rulers": [80],
     "workbench.colorCustomizations": {
         "editorRuler.foreground": "#ffda3388"
     },
@@ -17,8 +17,8 @@
     },
     "files.exclude": {
         ".vscode/": true,
-        "mypy_cache/": true,
-        "**/__pycache__": true
+        "**/__pycache__": true,
+        "mypy_cache/": true
     },
     "files.trimTrailingWhitespace": true,
     "files.watcherExclude": {
@@ -31,12 +31,10 @@
         "**/*.pyc": true,
         "**/__pycache__": true
     },
-    "python.pythonPath": "/Users/daniel/.pyenv/shims/python3",
     "python.linting.enabled": true,
     "python.linting.pylintEnabled": false,
     "python.linting.flake8Enabled": true,
     "python.linting.flake8Path": "/Users/daniel/.pyenv/shims/flake8",
-    "python.linting.pycodestyleEnabled": true,
     "python.linting.pycodestylePath": "/Users/daniel/.pyenv/shims/pep8",
     "python.linting.mypyEnabled": true,
     "python.linting.mypyPath": "/Users/daniel/.pyenv/shims/mypy",
@@ -46,14 +44,16 @@
     "python.formatting.provider": "black",
     "python.formatting.blackPath": "/Users/daniel/.pyenv/shims/black",
     "python.formatting.blackArgs": [
-        "--line-length", "78",
+        "--line-length",
+        "88"
     ],
     "[python]": {
+        "editor.formatOnPaste": false,
         "editor.formatOnSave": true,
         "editor.formatOnSaveTimeout": 4000,
         "editor.tabSize": 4,
         "editor.rulers": [
-            78
+            80
         ]
     },
     "[javascript]": {
@@ -64,6 +64,7 @@
         "editor.tabSize": 2
     },
     "[markdown]": {
+        "editor.tabSize": 2,
         "editor.wordWrap": "bounded",
         "editor.wordWrapColumn": 80,
     },
@@ -89,7 +90,32 @@
     "editor.wordWrap": "off",
     "editor.formatOnPaste": true,
     "editor.multiCursorModifier": "ctrlCmd",
-    "editor.snippetSuggestions": "top",
+    "editor.snippetSuggestions": "none",
     "workbench.colorTheme": "Monokai",
     "editor.columnSelection": false,
+    "python.defaultInterpreterPath": "/Users/daniel/.pyenv/shims/python3",
+    "python.showStartPage": false,
+    "editor.quickSuggestions": null,
+    "editor.acceptSuggestionOnEnter": "off",
+    "editor.suggest.localityBonus": true,
+    "editor.suggest.showIcons": false,
+    "workbench.editor.pinnedTabSizing": "compact",
+    "search.exclude": {
+        "**/.cache": true,
+        "**/.pytest_cache": true,
+        "**/*.egg-info": true,
+        "**/static/dist": true
+    },
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+    "workbench.editor.untitled.hint": "hidden",
+    "python.linting.flake8Args": [
+        "--max-line-length",
+        "88"
+    ],
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
 }
