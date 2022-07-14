@@ -1,9 +1,8 @@
 {
-    "editor.fontSize": 13,
+    "editor.fontSize": 15,
     "editor.fontFamily": "monofur, Menlo, Monaco, 'Courier New', monospace",
     "editor.renderWhitespace": "all",
     "editor.cursorStyle": "line-thin",
-    "editor.formatOnSaveTimeout": 4000,
     "editor.rulers": [80],
     "workbench.colorCustomizations": {
         "editorRuler.foreground": "#ffda3388"
@@ -35,6 +34,10 @@
     "python.linting.pylintEnabled": false,
     "python.linting.flake8Enabled": true,
     "python.linting.flake8Path": "/Users/daniel/.pyenv/shims/flake8",
+    "python.linting.flake8Args": [
+        "--max-line-length",
+        "80"
+    ],
     "python.linting.pycodestylePath": "/Users/daniel/.pyenv/shims/pep8",
     "python.linting.mypyEnabled": true,
     "python.linting.mypyPath": "/Users/daniel/.pyenv/shims/mypy",
@@ -50,13 +53,20 @@
     "[python]": {
         "editor.formatOnPaste": false,
         "editor.formatOnSave": true,
-        "editor.formatOnSaveTimeout": 4000,
         "editor.tabSize": 4,
         "editor.rulers": [
             80
         ]
     },
     "[javascript]": {
+        "editor.formatOnSave": true,
+        "editor.tabSize": 2
+    },
+    "[javascriptreact]": {
+        "editor.formatOnSave": true,
+        "editor.tabSize": 2
+    },
+    "[typescript]": {
         "editor.formatOnSave": true,
         "editor.tabSize": 2
     },
@@ -83,19 +93,16 @@
     "window.restoreWindows": "all",
     "window.newWindowDimensions": "inherit",
     "explorer.confirmDelete": false,
-    "editor.renderIndentGuides": false,
     "files.insertFinalNewline": false,
     "editor.scrollBeyondLastLine": true,
     "editor.trimAutoWhitespace": true,
     "editor.wordWrap": "off",
     "editor.formatOnPaste": true,
     "editor.multiCursorModifier": "ctrlCmd",
-    "editor.snippetSuggestions": "none",
+    "editor.snippetSuggestions": "top",
     "workbench.colorTheme": "Monokai",
     "editor.columnSelection": false,
-    "python.defaultInterpreterPath": "/Users/daniel/.pyenv/shims/python3",
-    "python.showStartPage": false,
-    "editor.quickSuggestions": null,
+    "editor.quickSuggestions": true,
     "editor.acceptSuggestionOnEnter": "off",
     "editor.suggest.localityBonus": true,
     "editor.suggest.showIcons": false,
@@ -110,12 +117,16 @@
         "*.ipynb": "jupyter-notebook"
     },
     "workbench.editor.untitled.hint": "hidden",
-    "python.linting.flake8Args": [
-        "--max-line-length",
-        "88"
-    ],
     "notebook.cellToolbarLocation": {
         "default": "right",
         "jupyter-notebook": "left"
     },
+    "workbench.editor.tabSizing": "shrink",
+    "zenMode.hideTabs": false,
+    "editor.tabCompletion": "on",
+    "editor.quickSuggestionsDelay": 500,
+    "javascript.updateImportsOnFileMove.enabled": "never",
+    "editor.detectIndentation": false,
+    "editor.smoothScrolling": true,
+    "workbench.list.smoothScrolling": true,
 }

@@ -9,7 +9,7 @@ IGNORES = [
     "bin",
     ".git",
     ".gitignore",
-    "ST2-User",
+    "ST4",
     "VS-Code",
     "My Twighlight.tmTheme",
     "zsh-configs",
@@ -40,31 +40,18 @@ def backup_file(link_name, verbose=False):
         )
 
 
-def link_st2(home_directory, verbose=False):
-    filename = os.path.normpath(os.path.realpath("ST2-User"))
+def link_st(home_directory, verbose=False):
+    filename = os.path.normpath(os.path.realpath("ST4/User"))
     link_name = os.path.join(
         home_directory,
         "Library",
         "Application Support",
-        "Sublime Text 2",
+        "Sublime Text",
         "Packages",
         "User",
     )
     backup_file(link_name, verbose=verbose)
     shell_out(["ln", "-s", filename, link_name], verbose=verbose)
-
-    theme_name = os.path.normpath(os.path.realpath("My Twilight.tmTheme"))
-    link_name = os.path.join(
-        home_directory,
-        "Library",
-        "Application Support",
-        "Sublime Text 2",
-        "Packages",
-        "Color Scheme - Default",
-        "My Twilight.tmTheme",
-    )
-    backup_file(link_name, verbose=verbose)
-    shell_out(["ln", "-s", theme_name, link_name], verbose=verbose)
 
 
 def link_vscode(home_directory, verbose=False):
@@ -160,7 +147,7 @@ def setup_dotfiles(home_directory, verbose=False):
     setup_symlinks(home_directory, regular_files, verbose=verbose)
 
     create_gitingore(home_directory, verbose=verbose)
-    # link_st2(home_directory, verbose=verbose)
+    link_st(home_directory, verbose=verbose)
     link_vscode(home_directory, verbose=verbose)
     link_zsh(home_directory, verbose=verbose)
     link_fish(home_directory, verbose=verbose)

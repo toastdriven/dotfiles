@@ -27,5 +27,12 @@
 			"def test_(self):\n    pass\n"
 		],
 		"description": "Starts a test stub method."
+	},
+	"fixme": {
+		"prefix": "fix",
+		"body": [
+			"# FIXME: ",
+		],
+		"description": "Starts a FIXME comment."
 	}
 }
