@@ -5,7 +5,8 @@ ssh-add ~/.ssh/id_rsa
 ulimit -n 4096
 
 # Ensure pyenv is working.
-pyenv init - | source
+status is-login; and pyenv init --path | source
+status is-interactive; and pyenv init - | source
 
 # Mighty tmux environments are MIGHTY!
 #
@@ -28,3 +29,9 @@ end
 
 # Created by `userpath` on 2020-02-24 20:21:47
 set PATH $PATH /Users/daniel/.local/bin
+
+if test -d /opt/homebrew
+    fish_add_path -g -p /opt/homebrew/bin /opt/homebrew/sbin
+end
+
+source /opt/homebrew/opt/asdf/libexec/asdf.fish

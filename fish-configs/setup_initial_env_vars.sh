@@ -1,8 +1,12 @@
 #! /usr/bin/env fish
 # Make sure Xcode build for the right OS.
-set -x -U MACOSX_DEPLOYMENT_TARGET "10.15"
+# set -x -U MACOSX_DEPLOYMENT_TARGET "12.0"
+# set -x -U ARCHFLAGS '-arch x86_64'
 
 set -x -U PATH "(pyenv root)/shims:/usr/local/bin:/usr/local/go/bin:/usr/local/sbin:$PATH"
+
+set -Ux PYENV_ROOT $HOME/.pyenv
+set -U fish_user_paths $PYENV_ROOT/bin $fish_user_paths
 
 # tmux needs ``TERM=screen`` to play nice.
 set -x -U TERM "screen"
@@ -10,7 +14,6 @@ set -x -U EDITOR "vim"
 set -x -U RUBYOPT "rubygems"
 set -x -U PIP_DOWNLOAD_CACHE '/tmp/pip'
 set -x -U NODE_PATH '/usr/local/lib/node'
-set -x -U ARCHFLAGS '-arch x86_64'
 set -x -U COPYFILE_DISABLE true
 set -x -U WORKON_HOME "$HOME/.virtualenvs"
 

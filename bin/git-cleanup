@@ -1,47 +1,52 @@
 #!/usr/bin/env python
-from __future__ import print_function
-
-from shell import shell
+import subprocess
 import sys
 
 
 IGNORE_BRANCHES = [
-    'master',
+    "master",
+    "main",
 ]
 CONFIRMATIONS = [
-    'y',
-    'yes',
-    'yup',
-    'sure',
+    "y",
+    "yes",
+    "yup",
+    "sure",
 ]
+
+
+def shell(cmd):
+    bits = cmd.split(" ")
+    proc = subprocess.run(bits, capture_output=True, text=True)
+    return proc
 
 
 def main():
-    sh = shell('git branch -l')
+    sh = shell("git branch -l")
 
-    if sh.errors():
-        print('\n'.join(sh.errors()))
+    if sh.returncode != 0:
+        print(sh.stderr)
         sys.exit(1)
 
-    for raw_branch in sh.output():
-        branch = raw_branch.lstrip('*').lstrip(' ')
+    for raw_branch in sh.stdout.splitlines():
+        branch = raw_branch.lstrip("*").lstrip(" ")
 
         if branch in IGNORE_BRANCHES:
             continue
 
-        delete_it = raw_input("Delete {}? [y/N] ".format(branch))
+        delete_it = input("Delete {}? [y/N] ".format(branch))
 
         if delete_it.lower() in CONFIRMATIONS:
-            sh = shell('git branch -D {}'.format(branch))
+            sh = shell("git branch -D {}".format(branch))
 
-            if sh.errors():
-                print('\n'.join(sh.errors()))
+            if sh.returncode != 0:
+                print(sh.stderr)
                 sys.exit(1)
 
-            sh = shell('git push origin :{}'.format(branch))
+            sh = shell("git push origin :{}".format(branch))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     if len(sys.argv) != 1:
         print("Usage: git cleanup")
         sys.exit(1)
