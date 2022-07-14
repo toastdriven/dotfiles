@@ -3,4 +3,7 @@
     "word_wrap": false,
     "spell_check": false,
     "auto_complete_use_history": true,
+    "rulers": [
+        88,
+    ],
 }

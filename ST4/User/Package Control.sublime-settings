@@ -5,9 +5,13 @@
 	],
 	"installed_packages":
 	[
+		"Babel",
+		"JsPrettier",
 		"LSP",
+		"LSP-pyright",
 		"Package Control",
 		"Pretty JSON",
+		"python-black",
 		"Twilight+",
 	],
 }

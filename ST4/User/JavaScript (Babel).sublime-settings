@@ -1,4 +1,4 @@
-// These settings override both User and Default settings for the Javascript syntax
+// These settings override both User and Default settings for the JavaScript (Babel) syntax
 {
     "word_wrap": false,
     "spell_check": false,

@@ -1,0 +1,6 @@
+{
+    "black_command": "/Users/daniel/.pyenv/shims/python",
+    "black_fast": true,
+    "black_on_save": true,
+    "black_line_length": 88,
+}
