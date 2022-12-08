@@ -12,6 +12,7 @@
     co = checkout
     cb = checkout -b
     ct = checkout -t
+    po = push origin
 [push]
 	default = simple
 [init]
