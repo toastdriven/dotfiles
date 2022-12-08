@@ -102,7 +102,11 @@
     "editor.snippetSuggestions": "top",
     "workbench.colorTheme": "Monokai",
     "editor.columnSelection": false,
-    "editor.quickSuggestions": true,
+    "editor.quickSuggestions": {
+        "comments": "on",
+        "strings": "on",
+        "other": "on"
+    },
     "editor.acceptSuggestionOnEnter": "off",
     "editor.suggest.localityBonus": true,
     "editor.suggest.showIcons": false,
