@@ -83,9 +83,7 @@ def link_vscode(home_directory, verbose=False):
     backup_file(link_name, verbose=verbose)
     shell_out(["ln", "-s", filename, link_name], verbose=verbose)
 
-    filename = os.path.join(
-        os.path.normpath(os.path.realpath("VS-Code")), "snippets"
-    )
+    filename = os.path.join(os.path.normpath(os.path.realpath("VS-Code")), "snippets")
     link_name = os.path.join(
         home_directory,
         "Library",
@@ -137,6 +135,21 @@ def link_fish(home_directory, verbose=False):
     print("    $ ./.config/fish/setup_initial_env_vars.sh")
 
 
+def link_kitty(home_directory, verbose=False):
+    filename = os.path.normpath(os.path.realpath("kitty-configs"))
+    link_name = os.path.join(home_directory, ".config", "kitty", "kitty.conf")
+    backup_file(link_name, verbose=verbose)
+
+    config_name = os.path.join(home_directory, ".config", "kitty")
+
+    if not os.path.exists(config_name):
+        os.makedirs(config_name)
+
+    shell_out(["ln", "-sFf", filename, link_name], verbose=verbose)
+    print("To install kitty:")
+    print("    $ curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin")
+
+
 def setup_dotfiles(home_directory, verbose=False):
     dotfile_pattern = os.path.join(".*")
     dotfile_files = glob.glob(dotfile_pattern)
@@ -151,6 +164,7 @@ def setup_dotfiles(home_directory, verbose=False):
     link_vscode(home_directory, verbose=verbose)
     link_zsh(home_directory, verbose=verbose)
     link_fish(home_directory, verbose=verbose)
+    link_kitty(home_directory, verbose=verbose)
 
 
 def setup_symlinks(home_directory, files, verbose=False):
