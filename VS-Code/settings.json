@@ -30,20 +30,7 @@
         "**/*.pyc": true,
         "**/__pycache__": true
     },
-    "python.linting.enabled": true,
-    "python.linting.pylintEnabled": false,
-    "python.linting.flake8Enabled": true,
-    "python.linting.flake8Path": "/Users/daniel/.pyenv/shims/flake8",
-    "python.linting.flake8Args": [
-        "--max-line-length",
-        "80"
-    ],
-    "python.linting.pycodestylePath": "/Users/daniel/.pyenv/shims/pep8",
-    "python.linting.mypyEnabled": true,
-    "python.linting.mypyPath": "/Users/daniel/.pyenv/shims/mypy",
-    "python.linting.mypyArgs": [
-        "--quick-and-dirty"
-    ],
+    "python.linting.enabled": false,
     "python.formatting.provider": "black",
     "python.formatting.blackPath": "/Users/daniel/.pyenv/shims/black",
     "python.formatting.blackArgs": [
@@ -51,12 +38,17 @@
         "88"
     ],
     "[python]": {
-        "editor.formatOnPaste": false,
+        "editor.defaultFormatter": null,
         "editor.formatOnSave": true,
         "editor.tabSize": 4,
         "editor.rulers": [
             80
-        ]
+        ],
+        "editor.codeActionsOnSave": {
+            "source.fixAll": true,
+            "source.organizeImports": false,
+        },
+        "editor.formatOnType": true
     },
     "[javascript]": {
         "editor.formatOnSave": true,
