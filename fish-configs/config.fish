@@ -29,9 +29,16 @@ end
 
 # Created by `userpath` on 2020-02-24 20:21:47
 set PATH $PATH /Users/daniel/.local/bin
+set BREW_PATH /opt/homebrew
 
 if test -d /opt/homebrew
     fish_add_path -g -p /opt/homebrew/bin /opt/homebrew/sbin
+    set BREW_PATH /opt/homebrew
 end
 
-source /opt/homebrew/opt/asdf/libexec/asdf.fish
+if test -d /usr/local/Homebrew
+    fish_add_path -g -p /usr/local/bin /usr/local/sbin
+    set BREW_PATH /usr/local
+end
+
+source $BREW_PATH/opt/asdf/libexec/asdf.fish
