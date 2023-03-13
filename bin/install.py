@@ -85,12 +85,7 @@ def link_vscode(home_directory, verbose=False):
 
     filename = os.path.join(os.path.normpath(os.path.realpath("VS-Code")), "snippets")
     link_name = os.path.join(
-        home_directory,
-        "Library",
-        "Application Support",
-        "Code",
-        "User",
-        "snippets",
+        home_directory, "Library", "Application Support", "Code", "User", "snippets",
     )
     backup_file(link_name, verbose=verbose)
     shell_out(["ln", "-s", filename, link_name], verbose=verbose)
@@ -136,7 +131,7 @@ def link_fish(home_directory, verbose=False):
 
 
 def link_kitty(home_directory, verbose=False):
-    filename = os.path.normpath(os.path.realpath("kitty-configs"))
+    filename = os.path.normpath(os.path.realpath("kitty-configs/kitty.conf"))
     link_name = os.path.join(home_directory, ".config", "kitty", "kitty.conf")
     backup_file(link_name, verbose=verbose)
 
