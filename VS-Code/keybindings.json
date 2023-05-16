@@ -45,4 +45,8 @@
         "key": "cmd+k cmd+l",
         "command": "editor.action.transformToLowercase",
     },
+    {
+        "key": "ctrl+shift+t",
+        "command": "workbench.action.createTerminalEditor"
+    }
 ]
