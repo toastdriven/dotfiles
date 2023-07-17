@@ -15,5 +15,6 @@
     po = push origin
 [push]
 	default = simple
+    autoSetupRemote = true
 [init]
 	defaultBranch = main

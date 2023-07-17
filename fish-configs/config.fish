@@ -1,5 +1,5 @@
 # So ssh-agent behaves itself.
-ssh-add ~/.ssh/id_rsa
+ssh-add ~/.ssh/id_ed25519
 
 # Bump dat ulimit.
 ulimit -n 4096

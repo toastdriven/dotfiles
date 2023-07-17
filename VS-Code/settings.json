@@ -1,128 +1,122 @@
 {
-    "editor.fontSize": 15,
-    "editor.fontFamily": "monofur, Menlo, Monaco, 'Courier New', monospace",
-    "editor.renderWhitespace": "all",
-    "editor.cursorStyle": "line-thin",
+  "editor.fontSize": 15,
+  "editor.fontFamily": "monofur, Menlo, Monaco, 'Courier New', monospace",
+  "editor.renderWhitespace": "all",
+  "editor.cursorStyle": "line-thin",
+  "editor.rulers": [80],
+  "workbench.colorCustomizations": {
+    "editorRuler.foreground": "#ffda3388"
+  },
+  "editor.minimap.enabled": false,
+  "editor.emptySelectionClipboard": false,
+  "editor.cursorBlinking": "smooth",
+  "editor.dragAndDrop": false,
+  "files.associations": {
+    "*.ract": "handlebars"
+  },
+  "files.exclude": {
+    "**/__pycache__": true,
+    "mypy_cache/": true
+  },
+  "files.trimTrailingWhitespace": true,
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/**": true,
+    "**/env/**": true,
+    "**/env2/**": true,
+    "**/env3/**": true,
+    "**/*.pyc": true,
+    "**/__pycache__": true
+  },
+  "python.linting.enabled": false,
+  "python.formatting.provider": "black",
+  "python.formatting.blackPath": "/Users/daniel/.pyenv/shims/black",
+  "python.formatting.blackArgs": ["--line-length", "88"],
+  "[python]": {
+    "editor.defaultFormatter": null,
+    "editor.formatOnSave": true,
+    "editor.tabSize": 4,
     "editor.rulers": [80],
-    "workbench.colorCustomizations": {
-        "editorRuler.foreground": "#ffda3388"
+    "editor.codeActionsOnSave": {
+      "source.fixAll": true,
+      "source.organizeImports": false
     },
-    "editor.minimap.enabled": false,
-    "editor.emptySelectionClipboard": false,
-    "editor.cursorBlinking": "smooth",
-    "editor.dragAndDrop": false,
-    "files.associations": {
-        "*.ract": "handlebars"
-    },
-    "files.exclude": {
-        ".vscode/": true,
-        "**/__pycache__": true,
-        "mypy_cache/": true
-    },
-    "files.trimTrailingWhitespace": true,
-    "files.watcherExclude": {
-        "**/.git/objects/**": true,
-        "**/.git/subtree-cache/**": true,
-        "**/node_modules/**": true,
-        "**/env/**": true,
-        "**/env2/**": true,
-        "**/env3/**": true,
-        "**/*.pyc": true,
-        "**/__pycache__": true
-    },
-    "python.linting.enabled": false,
-    "python.formatting.provider": "black",
-    "python.formatting.blackPath": "/Users/daniel/.pyenv/shims/black",
-    "python.formatting.blackArgs": [
-        "--line-length",
-        "88"
-    ],
-    "[python]": {
-        "editor.defaultFormatter": null,
-        "editor.formatOnSave": true,
-        "editor.tabSize": 4,
-        "editor.rulers": [
-            80
-        ],
-        "editor.codeActionsOnSave": {
-            "source.fixAll": true,
-            "source.organizeImports": false,
-        },
-        "editor.formatOnType": true
-    },
-    "[javascript]": {
-        "editor.formatOnSave": true,
-        "editor.tabSize": 2
-    },
-    "[javascriptreact]": {
-        "editor.formatOnSave": true,
-        "editor.tabSize": 2
-    },
-    "[typescript]": {
-        "editor.formatOnSave": true,
-        "editor.tabSize": 2
-    },
-    "[handlebars]": {
-        "editor.tabSize": 2
-    },
-    "[markdown]": {
-        "editor.tabSize": 2,
-        "editor.wordWrap": "bounded",
-        "editor.wordWrapColumn": 80,
-    },
-    "[yaml]": {
-        "editor.tabSize": 2,
-    },
-    "typescript.npm": "/usr/local/bin/npm",
-    "terminal.external.osxExec": "iTerm.app",
-    "workbench.startupEditor": "newUntitledFile",
-    "workbench.editor.showIcons": false,
-    "workbench.editor.enablePreviewFromQuickOpen": false,
-    "workbench.editor.closeOnFileDelete": false,
-    "explorer.openEditors.visible": 10,
-    "explorer.autoReveal": false,
-    "window.openFoldersInNewWindow": "on",
-    "window.restoreWindows": "all",
-    "window.newWindowDimensions": "inherit",
-    "explorer.confirmDelete": false,
-    "files.insertFinalNewline": false,
-    "editor.scrollBeyondLastLine": true,
-    "editor.trimAutoWhitespace": true,
-    "editor.wordWrap": "off",
-    "editor.formatOnPaste": true,
-    "editor.multiCursorModifier": "ctrlCmd",
-    "editor.snippetSuggestions": "top",
-    "workbench.colorTheme": "Monokai",
-    "editor.columnSelection": false,
-    "editor.quickSuggestions": {
-        "comments": "on",
-        "strings": "on",
-        "other": "on"
-    },
-    "editor.acceptSuggestionOnEnter": "off",
-    "editor.suggest.localityBonus": true,
-    "editor.suggest.showIcons": false,
-    "workbench.editor.pinnedTabSizing": "compact",
-    "search.exclude": {
-        "**/.cache": true,
-        "**/.pytest_cache": true,
-        "**/*.egg-info": true,
-        "**/static/dist": true
-    },
-    "workbench.editorAssociations": {
-        "*.ipynb": "jupyter-notebook"
-    },
-    "workbench.editor.untitled.hint": "hidden",
-    "notebook.cellToolbarLocation": {
-        "default": "right",
-        "jupyter-notebook": "left"
-    },
-    "workbench.editor.tabSizing": "shrink",
-    "zenMode.hideTabs": false,
-    "editor.tabCompletion": "on",
-    "editor.quickSuggestionsDelay": 500,
-    "javascript.updateImportsOnFileMove.enabled": "never",
-    "editor.detectIndentation": false,
-    "editor.smoothScrolling": true,
-    "workbench.list.smoothScrolling": true,
+    "editor.formatOnType": true
+  },
+  "[javascript]": {
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2
+  },
+  "[javascriptreact]": {
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2
+  },
+  "[typescript]": {
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2
+  },
+  "[handlebars]": {
+    "editor.tabSize": 2
+  },
+  "[markdown]": {
+    "editor.tabSize": 2,
+    "editor.wordWrap": "bounded",
+    "editor.wordWrapColumn": 80
+  },
+  "[yaml]": {
+    "editor.tabSize": 2
+  },
+  "typescript.npm": "/usr/local/bin/npm",
+  "terminal.external.osxExec": "iTerm.app",
+  "workbench.startupEditor": "newUntitledFile",
+  "workbench.editor.showIcons": false,
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "workbench.editor.closeOnFileDelete": false,
+  "explorer.openEditors.visible": 10,
+  "explorer.autoReveal": false,
+  "window.openFoldersInNewWindow": "on",
+  "window.restoreWindows": "all",
+  "window.newWindowDimensions": "inherit",
+  "explorer.confirmDelete": false,
+  "files.insertFinalNewline": false,
+  "editor.scrollBeyondLastLine": true,
+  "editor.trimAutoWhitespace": true,
+  "editor.wordWrap": "off",
+  "editor.formatOnPaste": true,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.snippetSuggestions": "top",
+  "workbench.colorTheme": "Monokai",
+  "editor.columnSelection": false,
+  "editor.quickSuggestions": {
+    "comments": "on",
+    "strings": "on",
+    "other": "on"
+  },
+  "editor.acceptSuggestionOnEnter": "off",
+  "editor.suggest.localityBonus": true,
+  "editor.suggest.showIcons": false,
+  "workbench.editor.pinnedTabSizing": "compact",
+  "search.exclude": {
+    "**/.cache": true,
+    "**/.pytest_cache": true,
+    "**/*.egg-info": true,
+    "**/static/dist": true
+  },
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook"
+  },
+  "workbench.editor.untitled.hint": "hidden",
+  "notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "left"
+  },
+  "workbench.editor.tabSizing": "shrink",
+  "zenMode.hideTabs": false,
+  "editor.tabCompletion": "on",
+  "editor.quickSuggestionsDelay": 500,
+  "javascript.updateImportsOnFileMove.enabled": "never",
+  "editor.detectIndentation": false,
+  "editor.smoothScrolling": true,
+"workbench.list.smoothScrolling": true
 }
