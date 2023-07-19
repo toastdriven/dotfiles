@@ -41,4 +41,4 @@ if test -d /usr/local/Homebrew
     set BREW_PATH /usr/local
 end
 
-source $BREW_PATH/opt/asdf/libexec/asdf.fish
+source /home/daniel/.asdf/asdf.fish
