@@ -3,6 +3,8 @@
 # set -x -U MACOSX_DEPLOYMENT_TARGET "12.0"
 # set -x -U ARCHFLAGS '-arch x86_64'
 
+set -x -U fish_greeting ""
+
 set -x -U PATH "(pyenv root)/shims:/usr/local/bin:/usr/local/go/bin:/usr/local/sbin:$PATH"
 
 set -Ux PYENV_ROOT $HOME/.pyenv
