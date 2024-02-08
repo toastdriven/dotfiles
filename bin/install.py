@@ -155,7 +155,7 @@ def setup_dotfiles(home_directory, verbose=False):
     setup_symlinks(home_directory, regular_files, verbose=verbose)
 
     create_gitingore(home_directory, verbose=verbose)
-    link_st(home_directory, verbose=verbose)
+    # link_st(home_directory, verbose=verbose)
     link_vscode(home_directory, verbose=verbose)
     link_zsh(home_directory, verbose=verbose)
     link_fish(home_directory, verbose=verbose)
