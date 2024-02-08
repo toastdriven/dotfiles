@@ -27,39 +27,6 @@ HISTFILE=~/.zsh-configs/.zsh_history
 bindkey -v
 bindkey '^R' history-incremental-search-backward
 
-# Make sure Xcode build for the right OS.
-# export MACOSX_DEPLOYMENT_TARGET=10.15
-# export ARCHFLAGS '-arch x86_64'
-
-export PATH="/usr/local/bin:/usr/local/sbin:${PATH}"
-
-# tmux needs ``TERM=screen`` to play nice.
-export EDITOR="vim"
-export TERM="screen"
-export RUBYOPT=rubygems
-export PIP_DOWNLOAD_CACHE='/tmp/pip'
-export NODE_PATH="$HOME/.asdf/shims/node"
-export COPYFILE_DISABLE=true
-export WORKON_HOME=$HOME/.virtualenvs
-
-# For Homebrew.
-if [[ -d /opt/homebrew/bin ]]; then
-    eval "$(/opt/homebrew/bin/brew shellenv)"
-fi
-
-# For pyenv.
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-
-# For Go.
-export GOPATH=$HOME/Code/go
-export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
-
-# For Docker & Compose.
-export COMPOSE_DOCKER_CLI_BUILD="1"
-export DOCKER_BUILDKIT="1"
-
 # So ssh-agent behaves itself.
 if [[ -e ~/.ssh/id_ed25519 ]]; then
     ssh-add ~/.ssh/id_ed25519
@@ -101,3 +68,4 @@ do
     filename="${filename%.*}"
     alias $filename=$file
 done
+
