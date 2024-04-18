@@ -1,0 +1,78 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+[\\[](fg:blue)\
+$username\
+@\
+$hostname\
+:\
+$directory\
+[\\]](fg:blue)\
+: \
+"""
+
+right_format = """
+($git_branch$git_status)
+"""
+
+# Inserts a blank line between shell prompts
+add_newline = false
+
+command_timeout = 100
+
+# Replace the '❯' symbol in the prompt with '➜'
+[character] # The name of the module we are configuring is 'character'
+# success_symbol = '[➜](bold green)' # The 'success_symbol' segment is being set to '➜' with the color 'bold green'
+
+[directory]
+format = '[$path]($style)'
+style = 'green'
+
+[git_branch]
+format = '[$branch]($style)'
+style = "white"
+# symbol = "✖"
+
+[git_status]
+format = '[$all_status]($style)'
+conflicted = '🏳'
+ahead = '🏎💨'
+behind = '😰'
+diverged = '😵'
+up_to_date = '[hullo](green)'
+untracked = '🤷'
+stashed = '📦'
+modified = '📝'
+staged = '[✖](red)'
+renamed = '👅'
+deleted = '🗑'
+style = "green"
+# conflicted = '[✖](red)'
+# ahead = '[✖](red)'
+# behind = '[✖](red)'
+# diverged = '[✖](red)'
+# up_to_date = '[✓](green)'
+# untracked = '[✖](red)'
+# stashed = '[✖](red)'
+# modified = '[✖](red)'
+# staged = '[✖](red)'
+# renamed = '[✖](red)'
+# deleted = '[✖](red)'
+# style = "red"
+
+[hostname]
+format = '[$ssh_symbol$hostname]($style)'
+ssh_only = false
+ssh_symbol = '🌐 '
+style = 'white'
+
+# Disable the package module, hiding it from the prompt completely
+[package]
+disabled = false
+
+[username]
+format = '[$user]($style)'
+show_always = true
+style_user = 'white'
+style_root = 'bold red'
