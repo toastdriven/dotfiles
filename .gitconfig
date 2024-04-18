@@ -13,6 +13,7 @@
     cb = checkout -b
     ct = checkout -t
     po = push origin
+    pfo = push -f origin
 [push]
 	default = simple
     autoSetupRemote = true
