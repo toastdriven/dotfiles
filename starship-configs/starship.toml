@@ -2,6 +2,7 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 format = """
+$python\
 [\\[](fg:blue)\
 $username\
 @\
@@ -70,6 +71,9 @@ style = 'white'
 # Disable the package module, hiding it from the prompt completely
 [package]
 disabled = false
+
+[python]
+format = '\([$symbol$virtualenv](white)\) '
 
 [username]
 format = '[$user]($style)'
