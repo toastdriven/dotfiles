@@ -145,6 +145,19 @@ def link_kitty(home_directory, verbose=False):
     print("    $ curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin")
 
 
+def link_starship(home_directory, verbose=False):
+    filename = os.path.normpath(os.path.realpath("starship-configs/starship.toml"))
+    link_name = os.path.join(home_directory, ".config", "starship.toml")
+    backup_file(link_name, verbose=verbose)
+
+    config_name = os.path.join(home_directory, ".config")
+
+    if not os.path.exists(config_name):
+      os.makedirs(config_name)
+
+    shell_out(["ln", "-sFf", filename, link_name], verbose=verbose)
+
+
 def setup_dotfiles(home_directory, verbose=False):
     dotfile_pattern = os.path.join(".*")
     dotfile_files = glob.glob(dotfile_pattern)
@@ -160,6 +173,7 @@ def setup_dotfiles(home_directory, verbose=False):
     link_zsh(home_directory, verbose=verbose)
     link_fish(home_directory, verbose=verbose)
     link_kitty(home_directory, verbose=verbose)
+    link_starship(home_directory, verbose=verbose)
 
 
 def setup_symlinks(home_directory, files, verbose=False):
