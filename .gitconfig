@@ -14,6 +14,8 @@
     ct = checkout -t
     po = push origin
     pfo = push -f origin
+    pro = pull --rebase origin
+    prom = pull --rebase origin main
 [push]
 	default = simple
     autoSetupRemote = true
