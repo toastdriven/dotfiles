@@ -96,3 +96,5 @@ do
     filename="${filename%.*}"
     alias $filename=$file
 done
+
+. "$HOME/.cargo/env"
