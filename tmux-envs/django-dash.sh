@@ -1,5 +1,5 @@
 #!/bin/sh
-cd Code/django-dash
+cd ~/Code/django-dash
 
 tmux start-server
 tmux new-session -d -s django-dash -n git

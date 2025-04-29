@@ -1,5 +1,5 @@
 #!/bin/sh
-cd Code/mealplanner
+cd ~/Code/mealplanner
 
 tmux start-server
 tmux new-session -d -s mealplanner -n git
