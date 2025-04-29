@@ -10,10 +10,6 @@ end
 # Bump dat ulimit.
 ulimit -n 4096
 
-# Ensure pyenv is working.
-status is-login; and pyenv init --path | source
-status is-interactive; and pyenv init - | source
-
 # Mighty tmux environments are MIGHTY!
 #
 # The following code grabs all the files in the user's `$HOME/tmux-envs`
@@ -46,5 +42,9 @@ if test -d /usr/local/Homebrew
     fish_add_path -g -p /usr/local/bin /usr/local/sbin
     set BREW_PATH /usr/local
 end
+
+# Ensure pyenv is working.
+status is-login; and pyenv init --path | source
+status is-interactive; and pyenv init - | source
 
 source $BREW_PATH/opt/asdf/libexec/asdf.fish
