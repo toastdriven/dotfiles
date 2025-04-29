@@ -4,6 +4,8 @@
   "editor.renderWhitespace": "all",
   "editor.cursorStyle": "line-thin",
   "editor.rulers": [80],
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "eslint.useFlatConfig": true,
   "workbench.colorCustomizations": {
     "editorRuler.foreground": "#ffda3388"
   },
@@ -29,24 +31,26 @@
     "**/*.pyc": true,
     "**/__pycache__": true
   },
-  "python.linting.enabled": false,
-  "python.formatting.provider": "black",
-  "python.formatting.blackPath": "/Users/daniel/.pyenv/shims/black",
-  "python.formatting.blackArgs": ["--line-length", "88"],
+  "ruff.organizeImports": false,
   "[python]": {
-    "editor.defaultFormatter": null,
+    "editor.defaultFormatter": "charliermarsh.ruff",
     "editor.formatOnSave": true,
+    "editor.formatOnType": false,
+    "editor.formatOnPaste": false,
     "editor.tabSize": 4,
     "editor.rulers": [80],
     "editor.codeActionsOnSave": {
-      "source.fixAll": true,
-      "source.organizeImports": false
-    },
-    "editor.formatOnType": true
+      "source.fixAll": "explicit",
+      "source.organizeImports": "explicit"
+    }
   },
   "[javascript]": {
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnType": false,
+    "editor.formatOnPaste": false,
     "editor.formatOnSave": true,
-    "editor.tabSize": 2
+    "editor.formatOnSaveMode": "file"
   },
   "[javascriptreact]": {
     "editor.formatOnSave": true,
@@ -64,11 +68,14 @@
     "editor.wordWrap": "bounded",
     "editor.wordWrapColumn": 80
   },
+  "[vue]": {
+    "editor.tabSize": 2
+  },
   "[yaml]": {
     "editor.tabSize": 2
   },
   "typescript.npm": "/usr/local/bin/npm",
-  "terminal.external.osxExec": "iTerm.app",
+  "terminal.external.osxExec": "ghostty.app",
   "workbench.startupEditor": "newUntitledFile",
   "workbench.editor.showIcons": false,
   "workbench.editor.enablePreviewFromQuickOpen": false,
@@ -106,17 +113,17 @@
   "workbench.editorAssociations": {
     "*.ipynb": "jupyter-notebook"
   },
-  "workbench.editor.untitled.hint": "hidden",
   "notebook.cellToolbarLocation": {
     "default": "right",
     "jupyter-notebook": "left"
   },
   "workbench.editor.tabSizing": "shrink",
-  "zenMode.hideTabs": false,
   "editor.tabCompletion": "on",
   "editor.quickSuggestionsDelay": 500,
   "javascript.updateImportsOnFileMove.enabled": "never",
   "editor.detectIndentation": false,
   "editor.smoothScrolling": true,
-"workbench.list.smoothScrolling": true
+  "workbench.list.smoothScrolling": true,
+  "chat.commandCenter.enabled": false,
+  "window.confirmSaveUntitledWorkspace": false
 }
