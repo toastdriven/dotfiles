@@ -1,25 +1,28 @@
 [user]
-	name = Daniel Lindsley
-	email = daniel@toastdriven.com
+  name = Daniel Lindsley
+  email = daniel@toastdriven.com
 [color]
-	diff = auto
-	status = auto
-	branch = auto
+  diff = auto
+  status = auto
+  branch = auto
 [core]
-	excludesfile = /Users/daniel/.gitignore
+  excludesfile = /Users/daniel/.gitignore
 [alias]
-    st = status
-    co = checkout
-    cb = checkout -b
-    ct = checkout -t
-    po = push origin
-    pfo = push -f origin
-    pro = pull --rebase origin
-    prom = pull --rebase origin main
+  st = status
+  co = checkout
+  cb = checkout -b
+  ct = checkout -t
+  po = push origin
+  pfo = push -f origin
+  pro = pull --rebase origin
+  prom = pull --rebase origin main
 [push]
-	default = simple
-    autoSetupRemote = true
+  default = simple
+  autoSetupRemote = true
 [init]
-	defaultBranch = main
+  defaultBranch = main
 [rerere]
-	enabled = true
+  enabled = true
+[includeIf "gitdir:/Users/daniel/Code/SFU/"]
+  path = ~/.gitconfig-sixfeetup
+

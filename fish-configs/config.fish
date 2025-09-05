@@ -48,3 +48,5 @@ status is-login; and pyenv init --path | source
 status is-interactive; and pyenv init - | source
 
 source $BREW_PATH/opt/asdf/libexec/asdf.fish
+
+eval "$(direnv hook fish)"
