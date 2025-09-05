@@ -125,5 +125,11 @@
   "editor.smoothScrolling": true,
   "workbench.list.smoothScrolling": true,
   "chat.commandCenter.enabled": false,
-  "window.confirmSaveUntitledWorkspace": false
+"window.confirmSaveUntitledWorkspace": false,
+"chat.agent.enabled": false,
+"chat.extensionTools.enabled": false,
+"chat.focusWindowOnConfirmation": false,
+"chat.setupFromDialog": false,
+"workbench.editor.empty.hint": "hidden",
+"workbench.secondarySideBar.defaultVisibility": "hidden"
 }
