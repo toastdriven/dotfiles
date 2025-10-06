@@ -1,0 +1,104 @@
+#!/usr/bin/env python
+import json
+import subprocess
+import sys
+
+
+OP_TAGS = [
+    "ai",
+    "api-key",
+    "daniel",
+]
+OP_FIELDS = [
+    "username",
+    "credential",
+]
+
+
+class ApiKeyError(Exception):
+    pass
+
+
+def shell(cmd_bits):
+    proc = subprocess.run(cmd_bits, capture_output=True, text=True)
+    return proc
+
+
+def collect_api_key_ids():
+    get_list = [
+        "op",
+        "item",
+        "list",
+        "--tags",
+        ",".join(OP_TAGS),
+        "--format",
+        "json",
+    ]
+    api_key_options = shell(get_list)
+
+    if api_key_options.returncode != 0:
+        raise ApiKeyError(api_key_options.stderr)
+
+    results = json.loads(api_key_options.stdout)
+    return [res["id"] for res in results]
+
+
+def get_username_and_credential(api_key_id):
+    get_detail = [
+        "op",
+        "item",
+        "get",
+        api_key_id,
+        "--fields",
+        ",".join(OP_FIELDS),
+        "--format",
+        "json",
+    ]
+    api_key_details = shell(get_detail)
+
+    if api_key_details.returncode != 0:
+        raise ApiKeyError(api_key_details.stderr)
+
+    results = json.loads(api_key_details.stdout)
+
+    if len(results) != 2:
+        raise ApiKeyError(f"Unexpected number of fields returned! {len(results)}")
+
+    return {
+        "username": results[0].get("value", ""),
+        "password": results[1].get("value", ""),
+    }
+
+
+def collect_api_keys():
+    key_options = []
+    api_key_ids = collect_api_key_ids()
+
+    for api_key_id in api_key_ids:
+        key_options.append(get_username_and_credential(api_key_id))
+
+    sorted(key_options, key=lambda x: x["username"])
+    return key_options
+
+
+def main():
+    try:
+        key_options = collect_api_keys()
+        print("Choose a key:")
+
+        for offset, key_data in enumerate(key_options):
+            print(f"  {offset + 1}. {key_data["username"]}")
+
+        choice = input("Selection #: ")
+        print(key_options[int(choice) - 1]["password"])
+    except Exception as err:
+        print(str(err), file=sys.stderr)
+        sys.exit(1)
+
+
+if __name__ == "__main__":
+    if len(sys.argv) != 1:
+        print("Usage: choose-api-key")
+        sys.exit(1)
+
+    main()
