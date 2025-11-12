@@ -3,12 +3,17 @@ import glob
 import os
 import subprocess
 import sys
+from threading import local
 
 
 IGNORES = [
     "bin",
     ".git",
     ".gitignore",
+    "fish-configs",
+    "ghostty",
+    "goose",
+    "zed",
     "ST4",
     "VS-Code",
     "My Twighlight.tmTheme",
@@ -158,6 +163,20 @@ def link_starship(home_directory, verbose=False):
     shell_out(["ln", "-sFf", filename, link_name], verbose=verbose)
 
 
+def link_dotconfig(home_directory, local_directory, verbose=False):
+    filename = os.path.normpath(os.path.realpath(local_directory))
+    base_name = os.path.basename(filename)
+    # backup_file(link_name, verbose=verbose)
+
+    config_path = os.path.join(home_directory, ".config")
+    config_name = os.path.join(config_path, base_name)
+
+    if not os.path.exists(config_path):
+        os.makedirs(config_name)
+
+    shell_out(["ln", "-sFf", filename, config_name], verbose=verbose)
+
+
 def setup_dotfiles(home_directory, verbose=False):
     dotfile_pattern = os.path.join(".*")
     dotfile_files = glob.glob(dotfile_pattern)
@@ -172,8 +191,12 @@ def setup_dotfiles(home_directory, verbose=False):
     link_vscode(home_directory, verbose=verbose)
     link_zsh(home_directory, verbose=verbose)
     link_fish(home_directory, verbose=verbose)
-    link_kitty(home_directory, verbose=verbose)
+    # link_kitty(home_directory, verbose=verbose)
     link_starship(home_directory, verbose=verbose)
+
+    link_dotconfig(home_directory, "./ghostty", verbose=verbose)
+    link_dotconfig(home_directory, "./goose", verbose=verbose)
+    link_dotconfig(home_directory, "./zed", verbose=verbose)
 
 
 def setup_symlinks(home_directory, files, verbose=False):
