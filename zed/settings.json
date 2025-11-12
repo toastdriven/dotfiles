@@ -1,0 +1,92 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "project_panel": {
+    "auto_reveal_entries": false
+  },
+  "base_keymap": "VSCode",
+  "agent": {
+    "enabled": false,
+    "button": false,
+    "model_parameters": []
+  },
+  "preview_tabs": {
+    "enable_preview_from_file_finder": false
+  },
+  "tabs": {
+    "file_icons": false
+  },
+  "multi_cursor_modifier": "alt",
+  "scroll_beyond_last_line": "vertical_scroll_margin",
+  "minimap": {
+    "show": "never"
+  },
+  "cursor_shape": "bar",
+  "cursor_blink": true,
+  "auto_indent_on_paste": true,
+  "hard_tabs": false,
+  "show_whitespaces": "selection",
+  "ensure_final_newline_on_save": true,
+  "remove_trailing_whitespace_on_save": true,
+  "wrap_guides": [80, 120],
+  "soft_wrap": "none",
+  "file_types": {
+    "handlebars": ["*.ract"]
+  },
+  "ui_font_size": 16,
+  "buffer_font_family": "monofur",
+  "buffer_font_size": 15,
+  "theme": {
+    "mode": "system",
+    "light": "Zedokai (Filter Spectrum)",
+    "dark": "Ayu Dark"
+  },
+  "languages": {
+    "Python": {
+      "language_servers": ["!ty", "basedpyright", "..."],
+      "format_on_save": "off"
+    },
+    "HTML": {
+      "tab_size": 2,
+      "format_on_save": "off"
+    }
+  },
+  "lsp": {
+    "basedpyright": {
+      "settings": {
+        "basedpyright.disableOrganizeImports": true,
+        "basedpyright.openFilesOnly": true,
+        "basedpyright.analysis": {
+          // "diagnosticMode": "workspace",
+          "typeCheckingMode": "basic", // "off", "basic", "standard", "strict", "recommended", "all"
+          "inlayHints.callArgumentNames": false
+        }
+      }
+    },
+    "ruff": {
+      "binary": {
+        "ignore_system_version": false,
+        "path": "/Users/daniel/.pyenv/shims/ruff",
+        "arguments": ["server"]
+      },
+      "initialization_options": {
+        "settings": {
+          "configuration": {
+            "lint": {
+              "ignore": ["E501"]
+            }
+          },
+          // "exclude": [".venv"]
+          "fix": false,
+          "line-length": 120
+        }
+      }
+    }
+  }
+}

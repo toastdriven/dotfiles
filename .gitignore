@@ -12,6 +12,9 @@ env
 env2
 env3
 
+*.bak
+*.bak.*
+
 zsh-configs/.zcompdump
 zsh-configs/.zsh_history
 
@@ -19,3 +22,6 @@ fish-configs/fish_variables
 
 ST4/User/My Twilight.sublime-color-scheme
 ST4/User/Sisyphus.sublime-color-scheme
+
+zed/conversations/*
+zed/prompts/*

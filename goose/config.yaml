@@ -1,0 +1,43 @@
+GOOSE_PROVIDER: anthropic
+GOOSE_MODEL: claude-sonnet-4-0
+extensions:
+  computercontroller:
+    enabled: true
+    type: builtin
+    name: computercontroller
+    description: controls for webscraping, file caching, and automations
+    display_name: Computer Controller
+    timeout: 300
+    bundled: true
+    available_tools: []
+  developer:
+    enabled: true
+    type: builtin
+    name: developer
+    description: Code editing and shell access
+    display_name: Developer Tools
+    timeout: 300
+    bundled: true
+    available_tools: []
+  todo:
+    enabled: true
+    type: platform
+    name: todo
+    description: Enable a todo list for Goose so it can keep track of what it is doing
+    bundled: true
+    available_tools: []
+  chatrecall:
+    enabled: true
+    type: platform
+    name: chatrecall
+    description: Search past conversations and load session summaries for contextual memory
+    bundled: true
+    available_tools: []
+  extensionmanager:
+    enabled: true
+    type: platform
+    name: Extension Manager
+    description: Enable extension management tools for discovering, enabling, and disabling extensions
+    bundled: true
+    available_tools: []
+ANTHROPIC_HOST: https://api.anthropic.com

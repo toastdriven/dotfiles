@@ -1,0 +1,63 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      // "shift shift": "file_finder::Toggle"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      // "j k": "vim::NormalBefore"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "alt-cmd-shift-l": "editor::SelectAllMatches"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "cmd-l": "go_to_line::Toggle"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "cmd-shift-l": "editor::SelectLine"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "cmd-k u": "editor::ConvertToUpperCase"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "cmd-k l": "editor::ConvertToLowerCase"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "cmd-p": "project_symbols::Toggle"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "cmd-t": "file_finder::Toggle"
+    }
+  }
+]
