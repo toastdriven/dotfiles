@@ -23,5 +23,7 @@ fish-configs/fish_variables
 ST4/User/My Twilight.sublime-color-scheme
 ST4/User/Sisyphus.sublime-color-scheme
 
+goose/history.txt
+
 zed/conversations/*
 zed/prompts/*
