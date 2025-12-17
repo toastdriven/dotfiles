@@ -98,3 +98,6 @@ do
 done
 
 . "$HOME/.cargo/env"
+
+# Enable direnv.
+eval "$(direnv hook bash)"

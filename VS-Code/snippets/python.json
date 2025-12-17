@@ -17,9 +17,16 @@
 	"pdb": {
 		"prefix": "pdb",
 		"body": [
-			"import pdb; pdb.set_trace()"
+			"breakpoint()"
 		],
 		"description": "Adds a pdb trace to the code."
+	},
+    "brk": {
+		"prefix": "brk",
+		"body": [
+			"breakpoint()"
+		],
+		"description": "Adds a breakpoint to the code."
 	},
 	"test_": {
 		"prefix": "test_",

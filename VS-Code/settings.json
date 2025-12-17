@@ -131,5 +131,6 @@
 "chat.focusWindowOnConfirmation": false,
 "chat.setupFromDialog": false,
 "workbench.editor.empty.hint": "hidden",
-"workbench.secondarySideBar.defaultVisibility": "hidden"
+"workbench.secondarySideBar.defaultVisibility": "hidden",
+"python.defaultInterpreterPath": "/opt/homebrew/bin/python3"
 }
