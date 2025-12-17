@@ -1,0 +1,6 @@
+~/.ssh/
+
+*.log
+
+# Explicitly allow this file.
+!c7n_aws_resources.json
