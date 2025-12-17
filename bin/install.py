@@ -17,7 +17,6 @@ IGNORES = [
     "ST4",
     "VS-Code",
     "My Twighlight.tmTheme",
-    "zsh-configs",
 ]
 
 
@@ -96,28 +95,6 @@ def link_vscode(home_directory, verbose=False):
     shell_out(["ln", "-s", filename, link_name], verbose=verbose)
 
 
-def link_zsh(home_directory, verbose=False):
-    filename = os.path.normpath(os.path.realpath(".zshenv"))
-    link_name = os.path.join(home_directory, ".zshenv")
-    backup_file(link_name, verbose=verbose)
-    shell_out(["ln", "-sFf", filename, link_name], verbose=verbose)
-
-    filename = os.path.normpath(os.path.realpath("zsh-configs"))
-    link_name = os.path.join(home_directory, ".zsh-configs")
-    shell_out(["ln", "-sFf", filename, link_name], verbose=verbose)
-
-    filename = os.path.normpath(
-        os.path.join(os.path.realpath("zsh-configs"), "toastdriven.zsh")
-    )
-    prompts_name = os.path.join(home_directory, ".zprompts")
-
-    if not os.path.exists(prompts_name):
-        os.makedirs(prompts_name)
-
-    link_name = os.path.join(prompts_name, "prompt_toastdriven_setup")
-    shell_out(["ln", "-sFf", filename, link_name], verbose=verbose)
-
-
 def link_fish(home_directory, verbose=False):
     filename = os.path.normpath(os.path.realpath("fish-configs"))
     link_name = os.path.join(home_directory, ".config", "fish")
@@ -189,7 +166,6 @@ def setup_dotfiles(home_directory, verbose=False):
     create_gitingore(home_directory, verbose=verbose)
     # link_st(home_directory, verbose=verbose)
     link_vscode(home_directory, verbose=verbose)
-    link_zsh(home_directory, verbose=verbose)
     link_fish(home_directory, verbose=verbose)
     # link_kitty(home_directory, verbose=verbose)
     link_starship(home_directory, verbose=verbose)
