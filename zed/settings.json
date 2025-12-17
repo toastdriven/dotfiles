@@ -11,6 +11,9 @@
     "auto_reveal_entries": false
   },
   "base_keymap": "VSCode",
+  "sticky_scroll": {
+    "enabled": true
+  },
   "agent": {
     "enabled": false,
     "button": false,
@@ -31,7 +34,10 @@
   "cursor_blink": true,
   "auto_indent_on_paste": true,
   "hard_tabs": false,
-  "show_whitespaces": "selection",
+  "show_whitespaces": "boundary",
+  "whitespace_map": {
+    "space": " "
+  },
   "ensure_final_newline_on_save": true,
   "remove_trailing_whitespace_on_save": true,
   "wrap_guides": [80, 120],
@@ -47,6 +53,7 @@
     "light": "Zedokai (Filter Spectrum)",
     "dark": "Ayu Dark"
   },
+  "load_direnv": "disabled",
   "languages": {
     "Python": {
       "language_servers": ["!ty", "basedpyright", "..."],
