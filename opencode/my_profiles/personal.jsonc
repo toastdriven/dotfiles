@@ -1,0 +1,61 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+
+  // Ref: https://opencode.ai/docs/permissions
+  "permission": {
+    "bash": "allow",
+    "doom_loop": "ask",
+    "external_directory": "ask",
+    "edit": "allow",
+    "webfetch": "allow",
+  },
+
+  // Ref: https://opencode.ai/docs/models
+  "provider": {
+    "anthropic": {
+      "models": {
+        "claude-sonnet-4-5": {
+          "name": "Claude Pro Sonnet-4.5 (Personal)",
+          "options": {
+            // "thinking": {
+            //   "type": "enabled",
+            //   "budgetTokens": 16000,
+            // },
+          },
+        },
+      },
+      "options": {
+        // Auth credentials are in `~/.local/share/opencode/auth.json`.
+        // Specifically, when connecting Claude Code, it stores the token there.
+        "apiKey": "{file:~/.secrets/personal.apikey}",
+      },
+    },
+  },
+  "model": "anthropic/claude-sonnet-4-5",
+
+  // Ref: https://opencode.ai/docs/themes
+  "theme": "matrix",
+
+  // Ref: https://opencode.ai/docs/tools
+  "tools": {
+    "bash": true,
+    "edit": true,
+    "glob": true,
+    "grep": true,
+    "list": true,
+    "patch": true,
+    "read": true,
+    "todoread": true,
+    "todowrite": true,
+    "webfetch": true,
+    "write": true,
+  },
+
+  // Ref: https://opencode.ai/docs/config/#tui
+  // "tui": {
+  //   "scroll_speed": 3,
+  //   "scroll_acceleration": {
+  //     "enabled": true,
+  //   },
+  // },
+}

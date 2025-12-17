@@ -1,0 +1,59 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+
+  // Ref: https://opencode.ai/docs/permissions
+  "permission": {
+    "bash": "allow",
+    "doom_loop": "ask",
+    "external_directory": "ask",
+    "edit": "allow",
+    "webfetch": "allow",
+  },
+
+  // Ref: https://opencode.ai/docs/models
+  "provider": {
+    "anthropic": {
+      "models": {
+        "claude-sonnet-4-5": {
+          "name": "Anthropic Sonnet-4.5 (Stacklet 014)",
+          "options": {
+            // "thinking": {
+            //   "type": "enabled",
+            //   "budgetTokens": 16000,
+            // },
+          },
+        },
+      },
+      "options": {
+        "apiKey": "{file:~/.secrets/stkl014.apikey}",
+      },
+    },
+  },
+  "model": "anthropic/claude-sonnet-4-5",
+
+  // Ref: https://opencode.ai/docs/themes
+  "theme": "kanagawa",
+
+  // Ref: https://opencode.ai/docs/tools
+  "tools": {
+    "bash": true,
+    "edit": true,
+    "glob": true,
+    "grep": true,
+    "list": true,
+    "patch": true,
+    "read": true,
+    "todoread": true,
+    "todowrite": true,
+    "webfetch": true,
+    "write": true,
+  },
+
+  // Ref: https://opencode.ai/docs/config/#tui
+  // "tui": {
+  //   "scroll_speed": 3,
+  //   "scroll_acceleration": {
+  //     "enabled": true,
+  //   },
+  // },
+}

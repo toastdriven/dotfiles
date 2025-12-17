@@ -172,6 +172,7 @@ def setup_dotfiles(home_directory, verbose=False):
 
     link_dotconfig(home_directory, "./ghostty", verbose=verbose)
     link_dotconfig(home_directory, "./goose", verbose=verbose)
+    link_dotconfig(home_directory, "./opencode", verbose=verbose)
     link_dotconfig(home_directory, "./zed", verbose=verbose)
 
 
