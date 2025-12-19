@@ -50,3 +50,7 @@ status is-interactive; and pyenv init - | source
 source $BREW_PATH/opt/asdf/libexec/asdf.fish
 
 eval "$(direnv hook fish)"
+
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH

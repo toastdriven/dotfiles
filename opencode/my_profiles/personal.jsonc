@@ -27,7 +27,7 @@
       "options": {
         // Auth credentials are in `~/.local/share/opencode/auth.json`.
         // Specifically, when connecting Claude Code, it stores the token there.
-        "apiKey": "{file:~/.secrets/personal.apikey}",
+        // "apiKey": "{file:~/.secrets/personal.apikey}",
       },
     },
   },
