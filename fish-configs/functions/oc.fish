@@ -15,6 +15,7 @@ function oc -a profile --description 'opencode wrapper with profile support'
 
     # Unset OPENCODE_CONFIG to ensure clean state
     set -e OPENCODE_CONFIG
+    set -l oauth_profiles "personal" "codex"
 
     # Oauth credentials
     set orig_auth_path "$HOME/.local/share/opencode/auth.json"
@@ -30,14 +31,14 @@ function oc -a profile --description 'opencode wrapper with profile support'
             return 1
         end
 
-        if test "$profile" != "personal"
-            echo "Shuffling away the Oauth credentials..."
-            mv $orig_auth_path $bak_auth_path
-        else
+        if contains "$profile" $oauth_profiles
             echo "Restoring the Oauth credentials..."
             # Copy them over only if they're not already there.
             # If it's there, assume it's more current.
             cp -n $bak_auth_path $orig_auth_path
+        else
+            echo "Shuffling away the Oauth credentials..."
+            mv $orig_auth_path $bak_auth_path
         end
 
         # Set the config path and run opencode

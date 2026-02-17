@@ -47,10 +47,21 @@ end
 status is-login; and pyenv init --path | source
 status is-interactive; and pyenv init - | source
 
-source $BREW_PATH/opt/asdf/libexec/asdf.fish
+if test -f $BREW_PATH/opt/asdf/libexec/asdf.fish
+    source $BREW_PATH/opt/asdf/libexec/asdf.fish
+else
+    echo "No asdf support present!"
+end
 
-eval "$(direnv hook fish)"
+if type -q direnv
+    eval "$(direnv hook fish)"
+else
+    echo "No direnv support present!"
+end
 
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/daniel/Downloads/google-cloud-sdk/path.fish.inc' ]; . '/Users/daniel/Downloads/google-cloud-sdk/path.fish.inc'; end

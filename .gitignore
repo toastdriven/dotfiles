@@ -24,6 +24,7 @@ ST4/User/My Twilight.sublime-color-scheme
 ST4/User/Sisyphus.sublime-color-scheme
 
 goose/history.txt
+goose/chatgpt_codex/tokens.json
 
 zed/conversations/*
 zed/prompts/*
