@@ -25,4 +25,3 @@
 	enabled = true
 [includeIf "gitdir:/Users/daniel/Code/SFU/"]
   path = ~/.gitconfig-sixfeetup
-
