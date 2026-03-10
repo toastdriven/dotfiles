@@ -65,3 +65,9 @@ set --export PATH $BUN_INSTALL/bin $PATH
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/daniel/Downloads/google-cloud-sdk/path.fish.inc' ]; . '/Users/daniel/Downloads/google-cloud-sdk/path.fish.inc'; end
+
+# Guide goose towards better tool choices.
+if [ -n "$GOOSE_TERMINAL" ]
+  alias find "echo 'Use rg instead: rg --files | rg <pattern> for filenames, or rg <pattern> for content search'"
+  alias grep "echo 'Use rg instead: rg <pattern> for content search'"
+end
