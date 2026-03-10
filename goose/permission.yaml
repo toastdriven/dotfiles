@@ -5,5 +5,7 @@ user:
   - developer__text_editor
   - computercontroller__cache
   - computercontroller__web_scrape
+  - load
+  - delegate
   ask_before: []
   never_allow: []
