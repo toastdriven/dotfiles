@@ -62,8 +62,14 @@ clipboard-write = allow
 # scrollback-limit = 104857600
 scrollback-limit = 107374182400
 
+tab-inherit-working-directory = false
+
 window-inherit-working-directory = false
 window-inherit-font-size = false
+
+window-save-state = always
+window-new-tab-position = end
+window-show-tab-bar = always
 
 # official, blueprint, chalkboard, microchip, glass, holographic, paper, retro, xray
 macos-icon = holographic
