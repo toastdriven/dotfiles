@@ -8,27 +8,31 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
   "project_panel": {
-    "auto_reveal_entries": false
+    "auto_reveal_entries": false,
   },
   "base_keymap": "VSCode",
   "sticky_scroll": {
-    "enabled": true
+    "enabled": true,
   },
   "agent": {
     "enabled": false,
     "button": false,
-    "model_parameters": []
+    "model_parameters": [],
+  },
+  "disable_ai": true,
+  "title_bar": {
+    "show_sign_in": false,
   },
   "preview_tabs": {
-    "enable_preview_from_file_finder": false
+    "enable_preview_from_file_finder": false,
   },
   "tabs": {
-    "file_icons": false
+    "file_icons": false,
   },
   "multi_cursor_modifier": "alt",
   "scroll_beyond_last_line": "vertical_scroll_margin",
   "minimap": {
-    "show": "never"
+    "show": "never",
   },
   "cursor_shape": "bar",
   "cursor_blink": true,
@@ -36,14 +40,14 @@
   "hard_tabs": false,
   "show_whitespaces": "boundary",
   "whitespace_map": {
-    "space": " "
+    "space": " ",
   },
   "ensure_final_newline_on_save": true,
   "remove_trailing_whitespace_on_save": true,
   "wrap_guides": [80, 120],
   "soft_wrap": "none",
   "file_types": {
-    "handlebars": ["*.ract"]
+    "handlebars": ["*.ract"],
   },
   "ui_font_size": 16,
   "buffer_font_family": "monofur",
@@ -51,18 +55,18 @@
   "theme": {
     "mode": "system",
     "light": "Zedokai (Filter Spectrum)",
-    "dark": "Ayu Dark"
+    "dark": "Ayu Dark",
   },
   "load_direnv": "disabled",
   "languages": {
     "Python": {
       "language_servers": ["!ty", "basedpyright", "..."],
-      "format_on_save": "off"
+      "format_on_save": "off",
     },
     "HTML": {
       "tab_size": 2,
-      "format_on_save": "off"
-    }
+      "format_on_save": "off",
+    },
   },
   "lsp": {
     "basedpyright": {
@@ -72,28 +76,28 @@
         "basedpyright.analysis": {
           // "diagnosticMode": "workspace",
           "typeCheckingMode": "basic", // "off", "basic", "standard", "strict", "recommended", "all"
-          "inlayHints.callArgumentNames": false
-        }
-      }
+          "inlayHints.callArgumentNames": false,
+        },
+      },
     },
     "ruff": {
       "binary": {
         "ignore_system_version": false,
         "path": "/Users/daniel/.pyenv/shims/ruff",
-        "arguments": ["server"]
+        "arguments": ["server"],
       },
       "initialization_options": {
         "settings": {
           "configuration": {
             "lint": {
-              "ignore": ["E501"]
-            }
+              "ignore": ["E501"],
+            },
           },
           // "exclude": [".venv"]
           "fix": false,
-          "line-length": 120
-        }
-      }
-    }
-  }
+          "line-length": 120,
+        },
+      },
+    },
+  },
 }
