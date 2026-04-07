@@ -28,3 +28,7 @@ goose/chatgpt_codex/tokens.json
 
 zed/conversations/*
 zed/prompts/*
+
+pi-configs/agent/bin/*
+pi-configs/agent/sessions/*
+pi-configs/agent/*auth.json
