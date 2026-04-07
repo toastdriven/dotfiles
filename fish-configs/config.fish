@@ -59,6 +59,9 @@ else
     echo "No direnv support present!"
 end
 
+# Cargo
+fish_add_path -g -p $HOME/.cargo/bin
+
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH

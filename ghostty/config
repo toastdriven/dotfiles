@@ -77,4 +77,5 @@ macos-icon = holographic
 auto-update = check
 
 keybind = global:cmd+alt+grave_accent=toggle_quick_terminal
-keybind = shift+enter=text:\x1b\r
+# keybind = shift+enter=text:\x1b\r
+keybind = alt+backspace=text:\x1b\x7f
