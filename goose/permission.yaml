@@ -1,3 +1,11 @@
+smart_approve:
+  always_allow: []
+  ask_before:
+  - edit
+  - shell
+  - todo__todo_write
+  - write
+  never_allow: []
 user:
   always_allow:
   - developer__shell
@@ -7,5 +15,11 @@ user:
   - computercontroller__web_scrape
   - load
   - delegate
+  - developer__analyze
+  - computercontroller__automation_script
+  - automation_script
+  - shell
+  - write
+  - edit
   ask_before: []
   never_allow: []
