@@ -12,5 +12,6 @@
     "gpt-5.3-codex*",
     "qwen3",
     "llama*"
-  ]
+  ],
+  "packages": []
 }
