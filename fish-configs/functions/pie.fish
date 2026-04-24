@@ -50,6 +50,8 @@ function pie -a profile --wraps="pi" --description 'A profile-based version of p
 
         set -x ANTHROPIC_API_KEY "$(get-api-key $profile)"
         echo "Using profile: Claude ($profile)."
+
+        $pi_bin $argv[2..-1]
     else
         # Only restore creds if the backup is non-empty & the orig is empty.
         if test "$bak_contents" != "{}"
@@ -59,9 +61,14 @@ function pie -a profile --wraps="pi" --description 'A profile-based version of p
             end
         end
 
-        echo "Using profile: Claude (Oauth-based)."
+        if test "$profile" = "personal"
+            echo "Using profile: Claude (Oauth-based)."
+            $pi_bin --models "claude-sonnet-4-6*" $argv[2..-1]
+        else
+            echo "Using profile: Codex (Oauth-based)."
+            $pi_bin --models "gpt-5.3-codex*" $argv[2..-1]
+        end
     end
 
-    $pi_bin $argv[2..-1]
     return $status
 end

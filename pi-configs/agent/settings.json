@@ -1,5 +1,5 @@
 {
-  "lastChangelogVersion": "0.67.1",
+  "lastChangelogVersion": "0.70.2",
   "defaultProvider": "anthropic",
   "defaultModel": "claude-sonnet-4-6",
   "defaultThinkingLevel": "medium",
