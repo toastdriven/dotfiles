@@ -7,7 +7,18 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "cli_default_open_behavior": "new_window",
+  "outline_panel": {
+    "dock": "left"
+  },
+  "collaboration_panel": {
+    "dock": "left"
+  },
+  "git_panel": {
+    "dock": "left"
+  },
   "project_panel": {
+    "dock": "left",
     "auto_reveal_entries": false,
   },
   "base_keymap": "VSCode",
@@ -15,6 +26,7 @@
     "enabled": true,
   },
   "agent": {
+    "dock": "right",
     "enabled": false,
     "button": false,
     "model_parameters": [],
