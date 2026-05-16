@@ -69,7 +69,9 @@ export PATH=$PATH:$GOPATH/bin
 
 
 # So ssh-agent behaves itself.
-ssh-add ~/.ssh/id_rsa
+if [ -f ~/.ssh/id_rsa ]; then
+    ssh-add ~/.ssh/id_rsa
+fi
 
 # Conveniences.
 alias ls="ls -G"
