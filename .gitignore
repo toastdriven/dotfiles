@@ -32,3 +32,6 @@ zed/prompts/*
 pi-configs/agent/bin/*
 pi-configs/agent/sessions/*
 pi-configs/agent/*auth.json
+pi-configs/agent/npm
+pi-configs/agent/trust.json
+pi-configs/agent/models-store.json

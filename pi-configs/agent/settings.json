@@ -1,17 +1,12 @@
 {
-  "lastChangelogVersion": "0.78.0",
+  "lastChangelogVersion": "0.84.0",
   "defaultProvider": "anthropic",
   "defaultModel": "claude-sonnet-4-6",
   "defaultThinkingLevel": "medium",
   "theme": "monokai",
   "editorPaddingX": 1,
   "hideThinkingBlock": true,
-  "enabledModels": [
-    "claude-sonnet-4-6*",
-    "claude-sonnet-4-5*",
-    "gpt-5.3-codex*",
-    "qwen3",
-    "llama*"
-  ],
-  "packages": []
+  "packages": [
+    "npm:@juicesharp/rpiv-args"
+  ]
 }
