@@ -1,0 +1,8 @@
+{
+  "startupNoticeShown": "2026-08-20",
+  "provider": {
+    "plan": "max",
+    "longContextExtraUsage": false,
+    "strictMcpConfig": false
+  }
+}

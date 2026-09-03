@@ -54,8 +54,8 @@ function pie -a profile --wraps="pi" --description 'A profile-based version of p
             end
         end
 
-        set -x ANTHROPIC_API_KEY "$(get-api-key $profile)"
-        echo "Using profile: Claude ($profile)."
+        # set -x ANTHROPIC_API_KEY "$(get-api-key $profile)"
+        echo "Using profile: Claude-bridge ($profile)."
 
         $pi_bin --models "claude-sonnet-5,claude-sonnet-4-6*" $argv[2..-1]
     else

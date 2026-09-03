@@ -1,12 +1,14 @@
 {
-  "lastChangelogVersion": "0.84.0",
-  "defaultProvider": "anthropic",
+  "lastChangelogVersion": "0.84.3",
+  "defaultProvider": "claude-bridge",
   "defaultModel": "claude-sonnet-4-6",
   "defaultThinkingLevel": "medium",
   "theme": "monokai",
   "editorPaddingX": 1,
   "hideThinkingBlock": true,
   "packages": [
-    "npm:@juicesharp/rpiv-args"
+    "npm:@juicesharp/rpiv-args",
+    "npm:pi-claude-bridge",
+    "npm:@tintinweb/pi-subagents"
   ]
 }
